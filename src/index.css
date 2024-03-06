@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue','Work Sans',
+    sans-serif,;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.input-new{
+  width: 480px;
+  height: 55px;
+  border: 1px solid #AAAAAA;
+  color: #AAAAAA;
+  padding-left: 5%;
+  font-size: 20px;
+}
+.input-city{
+  width: 50%;
+  height: 55px;
+  border: 1px solid #AAAAAA;
+  color: #AAAAAA;
+  padding-left: 5%;
+  font-size: 20px;
+}
+
+.input-clock{
+  width: 80%;
+  height: 55px;
+  border: 1px solid #AAAAAA;
+  color: #AAAAAA;
+  padding-left: 5%;
+  font-size: 19px;
+}
+.input-question{
+  
+  border: 1px solid #AAAAAA;
+  color: #AAAAAA;
+  padding-left: 5%;
+  font-size: 20px;
+}
+
+.textured-background {
+  position: relative;
+}
+
+.textured-background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/BgPng2.jpeg");
+  mix-blend-mode: overlay; /* Adjust blend mode as needed */
+  opacity: 0.7; /* Adjust opacity of the texture */
+}

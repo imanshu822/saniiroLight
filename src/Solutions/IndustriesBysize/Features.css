@@ -1,0 +1,37 @@
+/* App.css */
+
+
+
+.sidebar {
+  min-width: 20%;
+  top :0;
+  height: fit-content;
+  position: sticky;
+  
+}
+
+.sidebar ul {
+  list-style:  none;
+  padding: 0;
+}
+
+.sidebar li {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.sidebar li.active {
+  /* background-color: #ccc; */
+  color: #34A853;
+  text-decoration: underline;
+}
+
+
+.item {
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.item:last-child {
+  border-bottom: none;
+}

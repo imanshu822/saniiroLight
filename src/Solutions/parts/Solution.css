@@ -1,0 +1,19 @@
+.text-stroke {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+}
+.textured-background-Solution {
+  position: relative;
+}
+
+.textured-background-Solution::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/LoginMesh.png");
+  mix-blend-mode: color-dodge; /* Adjust blend mode as needed */
+  opacity: 0.2; /* Adjust opacity of the texture */
+}

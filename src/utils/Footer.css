@@ -1,0 +1,34 @@
+.Footer-new{
+    color: "lightgray"; text-decoration: "none"
+}
+.Footer-new:hover{
+    color: "#F15B25";
+}
+.list-item:hover {
+  color: #F15B25; /* Change color on hover */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.textured-background-Login {
+  position: relative;
+}
+
+.textured-background-Login::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/LoginMesh.png");
+  mix-blend-mode: color-dodge; /* Adjust blend mode as needed */
+  opacity: 0.7; /* Adjust opacity of the texture */
+}
+.input-Login{
+  width: 333px;
+  height: 55px;
+  border: 1px solid #AAAAAA;
+  color: #AAAAAA;
+  padding-left: 5%;
+  font-size: 18px;
+}

@@ -1,0 +1,7 @@
+.background-images {
+  height: 100%;
+  width: 100%;
+  background-image: url("../assets//Rectangle1178.png"),
+    url("../assets/Rectangle1179.png");
+  background-blend-mode: screen;
+}

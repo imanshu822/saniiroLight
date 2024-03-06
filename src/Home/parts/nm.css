@@ -1,0 +1,25 @@
+/* PhoneNumberInput.css */
+
+/* Increase the width of the phone input */
+.react-tel-input {
+  width: 480px;
+  height: 58px;
+}
+
+/* Customize the border color */
+.react-tel-input input[type="tel"] {
+  border: 1px solid #AAAAAA; /* Change to your desired border color */
+   width: 508px;
+  height: 58px;
+  font-size: 20px;
+  padding-left: 15%;
+  border-radius: 0;
+}
+
+/* Customize the styles of the country dropdown */
+.react-tel-input .flag-dropdown {
+  /* Add your custom styles here */
+}
+.react-tel-input .selected-flag {
+    width: 58px;
+}
