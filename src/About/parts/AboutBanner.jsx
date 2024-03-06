@@ -5,7 +5,12 @@ import Button from "../../utils/Button";
 const AboutBanner = () => {
   return (
     <>
-      {/* <Stack>
+      {/* <Stack
+        display={{
+          xs: "none",
+          lg: "flex",
+        }}
+      >
         <Stack
           pt={1}
           height={"600px"}
@@ -65,7 +70,12 @@ const AboutBanner = () => {
         </Stack>
       </Stack> */}
 
-      <Stack>
+      <Stack
+      // display={{
+      //   xs: "flex",
+      //   lg: "none",
+      // }}s
+      >
         <Stack
           paddingTop={{
             xs: "20px",
@@ -111,8 +121,7 @@ const AboutBanner = () => {
                 xs: "12px",
                 sm: "16px",
                 md: "18px",
-                lg: "28px",
-                xl: "32px",
+                lg: "38px",
               }}
               textAlign={"center"}
             >
@@ -125,15 +134,14 @@ const AboutBanner = () => {
                 xs: "12px",
                 sm: "16px",
                 md: "18px",
-                lg: "28px",
-                xl: "32px",
+                lg: "46px",
               }}
               textAlign={"center"}
               width={{
                 xs: "75%",
                 sm: "75%",
                 md: "80%",
-                lg: "100%",
+                lg: "70%",
               }}
             >
               Online Accounting Software for Every Business
