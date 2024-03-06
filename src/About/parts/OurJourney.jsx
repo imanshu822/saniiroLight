@@ -139,6 +139,7 @@ const OurJourney = () => {
             bgcolor={"#EFEFEF"}
             borderTop={"2px solid #052973"}
             position={"relative"}
+            height={"50px"}
           >
             <img
               src={circleIcon2}
