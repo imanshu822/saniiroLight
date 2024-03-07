@@ -1,6 +1,7 @@
 .text-stroke {
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: white;
+  color: "white";
 }
 .textured-background-Solution {
   position: relative;
