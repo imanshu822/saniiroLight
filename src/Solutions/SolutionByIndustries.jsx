@@ -1,14 +1,14 @@
-import { Stack } from '@mui/material'
-import React from 'react'
-import Nav from '../Navbar/Nav'
-import Industries1 from './industriesParts/Industries1'
-import Industries2 from './industriesParts/Industries2'
-import Industries3 from './industriesParts/Industries3'
-import Industries4 from './industriesParts/Industries4'
-import Clock from '../Home/parts/Clock'
-import ContactFaq from '../Home/parts/ContactFaq'
-import Footer from '../utils/Footer'
-import ProductSlider from '../About/parts/ProductSlider'
+import { Stack } from "@mui/material";
+import React from "react";
+import Nav from "../Navbar/Nav";
+import Industries1 from "./industriesParts/Industries1";
+import Industries2 from "./industriesParts/Industries2";
+import Industries3 from "./industriesParts/Industries3";
+import Industries4 from "./industriesParts/Industries4";
+import Clock from "../Home/parts/Clock";
+import ContactFaq from "../Home/parts/ContactFaq";
+import Footer from "../utils/Footer";
+import ProductSlider from "../About/parts/ProductSlider";
 
 const SolutionByIndustries = () => {
   return (
@@ -28,6 +28,6 @@ const SolutionByIndustries = () => {
       </Stack>
     </>
   );
-}
+};
 
-export default SolutionByIndustries
+export default SolutionByIndustries;

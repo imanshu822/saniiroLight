@@ -36,17 +36,16 @@ const SliderIndustry = () => {
     },
   ];
   const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5,
-    },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 5,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 1024, min: 768 },
+      items: 3,
+    },
+    bigMobile: {
+      breakpoint: { max: 768, min: 464 },
       items: 2,
     },
     mobile: {
@@ -55,21 +54,40 @@ const SliderIndustry = () => {
     },
   };
   return (
-    <Stack width="1000px">
+    <Stack
+      width={{
+        xs: "280px",
+        sm: "360px",
+        md: "700px",
+        lg: "1000px",
+      }}
+    >
       <Carousel
         responsive={responsive}
         autoPlay
         infinite
         autoPlaySpeed={1500}
-        removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
+        removeArrowOnDeviceType={["desktop", "tablet", "bigMobile", "mobile"]}
       >
         {features.map((d, index) => (
           <Box key={index}>
-            <img
-              src={d.src}
-              alt={`Logo ${index + 1}`}
-              style={{ width: "120px", height: "50px" }}
-            />
+            <Stack
+              width={{
+                xs: "50px",
+                sm: "80px",
+                md: "100px",
+                lg: "120px",
+              }}
+              height={"50px"}
+            >
+              <img
+                src={d.src}
+                alt={`Logo ${index + 1}`}
+                width={"100%"}
+                height={"100%"}
+                style={{ width: "120px", height: "50px" }}
+              />
+            </Stack>
           </Box>
         ))}
       </Carousel>
