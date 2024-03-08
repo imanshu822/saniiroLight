@@ -3,24 +3,33 @@ import React from "react";
 
 const BillingSteps = () => {
   return (
-    <Stack>
+    <>
       <Stack
         direction={"column"}
         justifyContent={"center"}
         alignItems={"center"}
-        width={"1255px"}
+        maxWidth={"1280px"}
         margin={"0 auto"}
         textTransform={"capitalize"}
       >
-        <Stack alignItems={"start"} width={"100%"}>
+        <Stack
+          alignItems={{
+            xs: "center",
+            xl: "start",
+          }}
+          width={"100%"}
+        >
           <Typography
             sx={{
               fontFamily: "Work Sans",
-              fontSize: "45px",
+              fontSize: {
+                xs: "35px",
+                lg: "45px",
+              },
               fontWeight: 700,
               lineHeight: "42px",
               letterSpacing: "0em",
-              textAlign: "left",
+
               color: "#052973",
               marginTop: "30px",
               marginBottom: "30px",
@@ -30,10 +39,24 @@ const BillingSteps = () => {
           </Typography>
         </Stack>
 
-        <Stack direction={"row"} gap={2} margin={"0 auto"}>
+        <Stack
+          direction={"row"}
+          flexWrap={"wrap"}
+          gap={2}
+          alignItems={"center"}
+          justifyContent={"center"}
+          margin={"10px"}
+        >
           <Stack
-            width={"404px"}
-            height={"394px"}
+            width={{
+              xs: "16rem",
+              lg: "404px",
+            }}
+            height={{
+              xs: "16rem",
+
+              lg: "394px",
+            }}
             borderRadius={"8px"}
             border={" 1px solid #DFDFDF"}
             color={"#FAFAFA"}
@@ -42,7 +65,10 @@ const BillingSteps = () => {
             <Typography
               sx={{
                 fontFamily: "Work Sans",
-                fontSize: "35px",
+                fontSize: {
+                  xs: "25px",
+                  lg: "35px",
+                },
                 fontWeight: 600,
                 lineHeight: "41px",
                 letterSpacing: "0em",
@@ -71,7 +97,10 @@ const BillingSteps = () => {
             <Typography
               sx={{
                 fontFamily: "Work Sans",
-                fontSize: "35px",
+                fontSize: {
+                  xs: "25px",
+                  lg: "35px",
+                },
                 fontWeight: 600,
                 lineHeight: "41px",
                 letterSpacing: "0em",
@@ -85,7 +114,10 @@ const BillingSteps = () => {
             <Typography
               sx={{
                 fontFamily: "Work Sans",
-                fontSize: "16px",
+                fontSize: {
+                  xs: "12px",
+                  lg: "16px",
+                },
                 fontWeight: 500,
                 lineHeight: "19px",
                 letterSpacing: "0em",
@@ -98,8 +130,15 @@ const BillingSteps = () => {
             </Typography>
           </Stack>
           <Stack
-            width={"404px"}
-            height={"394px"}
+            width={{
+              xs: "16rem",
+              lg: "404px",
+            }}
+            height={{
+              xs: "16rem",
+
+              lg: "394px",
+            }}
             borderRadius={"8px"}
             border={" 1px solid #DFDFDF"}
             color={"#FAFAFA"}
@@ -108,7 +147,10 @@ const BillingSteps = () => {
             <Typography
               sx={{
                 fontFamily: "Work Sans",
-                fontSize: "35px",
+                fontSize: {
+                  xs: "25px",
+                  lg: "35px",
+                },
                 fontWeight: 600,
                 lineHeight: "41px",
                 letterSpacing: "0em",
@@ -137,7 +179,10 @@ const BillingSteps = () => {
             <Typography
               sx={{
                 fontFamily: "Work Sans",
-                fontSize: "35px",
+                fontSize: {
+                  xs: "25px",
+                  lg: "35px",
+                },
                 fontWeight: 600,
                 lineHeight: "41px",
                 letterSpacing: "0em",
@@ -151,7 +196,10 @@ const BillingSteps = () => {
             <Typography
               sx={{
                 fontFamily: "Work Sans",
-                fontSize: "16px",
+                fontSize: {
+                  xs: "12px",
+                  lg: "16px",
+                },
                 fontWeight: 500,
                 lineHeight: "19px",
                 letterSpacing: "0em",
@@ -165,8 +213,15 @@ const BillingSteps = () => {
             </Typography>
           </Stack>
           <Stack
-            width={"404px"}
-            height={"394px"}
+            width={{
+              xs: "16rem",
+              lg: "404px",
+            }}
+            height={{
+              xs: "16rem",
+
+              lg: "394px",
+            }}
             borderRadius={"8px"}
             border={" 1px solid #DFDFDF"}
             color={"#FAFAFA"}
@@ -175,7 +230,10 @@ const BillingSteps = () => {
             <Typography
               sx={{
                 fontFamily: "Work Sans",
-                fontSize: "35px",
+                fontSize: {
+                  xs: "25px",
+                  lg: "35px",
+                },
                 fontWeight: 600,
                 lineHeight: "41px",
                 letterSpacing: "0em",
@@ -204,7 +262,10 @@ const BillingSteps = () => {
             <Typography
               sx={{
                 fontFamily: "Work Sans",
-                fontSize: "35px",
+                fontSize: {
+                  xs: "25px",
+                  lg: "35px",
+                },
                 fontWeight: 600,
                 lineHeight: "41px",
                 letterSpacing: "0em",
@@ -218,7 +279,10 @@ const BillingSteps = () => {
             <Typography
               sx={{
                 fontFamily: "Work Sans",
-                fontSize: "16px",
+                fontSize: {
+                  xs: "12px",
+                  lg: "16px",
+                },
                 fontWeight: 500,
                 lineHeight: "19px",
                 letterSpacing: "0em",
@@ -232,7 +296,7 @@ const BillingSteps = () => {
           </Stack>
         </Stack>
       </Stack>
-    </Stack>
+    </>
   );
 };
 

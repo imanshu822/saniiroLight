@@ -52,7 +52,6 @@ const NavLight = () => {
   const isPopoverOpen = (linkId) => Boolean(popoverState[linkId]);
   return (
     <>
-      {/* desktip view */}
       <Stack
         sx={{
           display: {
@@ -60,15 +59,21 @@ const NavLight = () => {
             lg: "flex",
           },
         }}
-        zIndex={16}
         direction={"row"}
         justifyContent={"space-between"}
         p={"20px 90px"}
         alignItems={"center"}
       >
-        <Link to={"/"}>
-          <img src={logoLight} alt="" />
-        </Link>
+        <Stack width={{ xl: "19%", md: "25%", sm: "35%" }}>
+          <Link to={"/"}>
+            <img
+              src={logoLight}
+              alt=""
+              style={{ width: "100%", height: "100%" }}
+            />
+          </Link>
+        </Stack>
+
         <Stack
           direction="row"
           justifyContent="space-between"
@@ -525,9 +530,12 @@ const NavLight = () => {
           margin={"0 auto"}
           padding={"20px 0px"}
         >
-          <Link to={"/"}>
-            <img src={logoLight} alt="" />
-          </Link>
+          <Stack width={{ xs: "45%", md: "30%" }}>
+            <Link to={"/"}>
+              <img src={logoLight} alt="" width={"100%"} height={"100%"} />
+            </Link>
+          </Stack>
+
           <Stack
             onClick={handleClick}
             width={"23px"}
@@ -556,20 +564,55 @@ const NavLight = () => {
 
         <Stack
           id="menu-container"
+          height={"100dvh"}
           width={"100%"}
-          height={"100vh"}
-          margin={"10px auto"}
-          position={"absolute"}
+          position={"fixed"}
           gap={2}
           sx={{
-            top: -10,
-            top: 65,
+            top: 0,
+            // bottom: 0,
             left: menuClick ? "0" : "-100%",
-            transition: "all 0.15s ease-in",
+            // right: menuClick ? "0" : "-100%",
+
+            transition: "all 0.2s ease-in",
             backgroundColor: "white",
-            zIndex: "11",
+            zIndex: "1000001",
           }}
         >
+          <Stack
+            margin={"10px auto"}
+            width={"100%"}
+            height={"40px"}
+            direction={"row"}
+            justifyContent={"end"}
+          >
+            <Stack
+              onClick={handleClick}
+              width={"32px"}
+              height={"32px"}
+              marginRight={"20px"}
+              marginTop={"15px"}
+              sx={{
+                display: {
+                  xs: "block",
+                  lg: "none",
+                },
+                "&:hover": {
+                  cursor: "pointer",
+                },
+              }}
+            >
+              {menuClick ? (
+                <RxCross2
+                  style={{ color: "#052973", width: "32px", height: "32px" }}
+                />
+              ) : (
+                <CgMenuRight
+                  style={{ color: "#052973", width: "32px", height: "32px" }}
+                />
+              )}
+            </Stack>
+          </Stack>
           <Accordion
             sx={{
               border: "none",

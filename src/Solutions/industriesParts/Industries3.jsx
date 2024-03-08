@@ -79,7 +79,8 @@ const Industries3 = () => {
           solution.
         </Typography>
         <Stack
-          width={"100%"}
+          margin={"0 auto"}
+          width={"95%"}
           height={{
             xs: "200px",
             sm: "300px",
@@ -104,6 +105,7 @@ const Industries3 = () => {
           ></ReactPlayer>
         </Stack>
       </Stack>
+
       <Stack
         width={{
           xs: "90%",
@@ -148,7 +150,8 @@ const Industries3 = () => {
           solution.
         </Typography>
         <Stack
-          width={"100%"}
+          margin={"0 auto"}
+          width={"95%"}
           height={{
             xs: "200px",
             sm: "300px",

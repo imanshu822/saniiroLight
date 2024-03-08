@@ -132,11 +132,15 @@ const ProductSlider = () => {
 
                 <Typography
                   width={{
-                    xs: "80%",
-                    md: "90%",
+                    xs: "100%",
+                    md: "95%",
                     lg: "80%",
                   }}
-                  marginLeft={"20px"}
+                  marginLeft={{
+                    xs: "0",
+                    md: "20px",
+                  }}
+                  textAlign={"justify"}
                 >
                   {d.title}
                 </Typography>

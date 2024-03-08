@@ -1,16 +1,23 @@
-import { Stack, Typography } from "@mui/material";
 import React from "react";
+import { Stack, Typography } from "@mui/material"; // Ensure correct import for Typography and Stack
 import FeatureCard from "./FeatureCard";
 import BillingCardData from "./BillingCardData";
 
 const BillingFeatures = () => {
   return (
-    <Stack backgroundColor={"#35373E"} height={"1500px"}>
+    <Stack sx={{ backgroundColor: "#35373E", height: "100%" }}>
       <Stack
-        width={"1024px"}
-        // border={"1px solid white"}
-
-        margin={"262px auto"}
+        sx={{
+          width: {
+            xs: "90%",
+            xl: "80%",
+          },
+          height: "100%",
+          margin: {
+            xs: "20px auto",
+            lg: "262px auto",
+          },
+        }}
       >
         <Stack>
           <Typography
@@ -21,7 +28,7 @@ const BillingFeatures = () => {
               lineHeight: "28px",
               letterSpacing: "0em",
               textAlign: "center",
-              color: " #F15B25",
+              color: "#F15B25",
             }}
           >
             Billing Management Software
@@ -41,9 +48,12 @@ const BillingFeatures = () => {
             Features at a glance
           </Typography>
           <Stack
-            marginTop={"65px"}
-            width={"1024px"}
-            // border={"1px solid white"}
+            marginTop={{
+              xs: "20px",
+              lg: "65px",
+            }}
+            width={"100%"}
+            height={"100%"}
             direction={"row"}
             gap={"19px"}
             flexWrap={"wrap"}

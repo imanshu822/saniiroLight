@@ -64,9 +64,11 @@ const Nav = () => {
         p={"20px 90px"}
         alignItems={"center"}
       >
-        <Link to={"/"}>
-          <img src={lo} alt="" />
-        </Link>
+        <Stack width={{xl:"19%",md:"25%",sm:"35%"}}>
+          <Link to={"/"}>
+            <img src={lo} alt="" style={{ width: "100%", height: "100%" }} />
+          </Link>
+        </Stack>
         <Stack
           direction="row"
           justifyContent="space-between"
@@ -517,9 +519,11 @@ const Nav = () => {
           alignItems={"center"}
           padding={"20px 29px"}
         >
-          <Link to={"/"}>
-            <img src={lo} alt="" />
-          </Link>
+          <Stack width={{xs:"45%",md:"30%"}}>
+            <Link to={"/"}>
+              <img src={lo} alt="" width={"100%"} height={"100%"} />
+            </Link>
+          </Stack>
           <Stack
             onClick={handleClick}
             width={"32px"}
@@ -833,257 +837,6 @@ const Nav = () => {
             </Link>
           </Stack>
         </Stack>
-
-        {/* <Stack
-          id="menu-container"
-          width={"100%"}
-          margin={"10px auto"}
-          position={"absolute"}
-          gap={2}
-          sx={{
-            top: 65,
-            left: menuClick ? "0" : "-100%",
-            transition: "all 0.2s ease-in",
-            backgroundColor: "white",
-            zIndex: "1000001",
-          }}
-        >
-          <Accordion
-            sx={{
-              border: "none",
-              boxShadow: "none",
-            }}
-          >
-            <AccordionSummary expandIcon={<ArrowDropDownIcon />}>
-              <Typography>
-                {" "}
-                <Link to="/Features" className="navlink-link">
-                  <Box
-                    display={"flex"}
-                    justifyContent="center"
-                    alignItems={"center"}
-                  >
-                    <Typography
-                      alignSelf="center"
-                      display="inline-block"
-                      fontSize={20}
-                      fontFamily={"Work Sans"}
-                      className="navlink"
-                      sx={{
-                        transition: "all 0.4s ease-in",
-                      }}
-                    >
-                      Features
-                    </Typography>
-                  </Box>
-                </Link>
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Stack justifyContent={"center"} gap={1} marginLeft={"20px"}>
-                <Link to="/Features/Billing" className="popperLinks">
-                  <Typography fontFamily={"Work Sans"} sx={{}}>
-                    Billing Management
-                  </Typography>
-                </Link>
-                <Link to="/Features/Billing" className="popperLinks">
-                  <Typography fontFamily={"Work Sans"} sx={{}}>
-                    Billing Management
-                  </Typography>
-                </Link>
-                <Link to="/Features/Billing" className="popperLinks">
-                  <Typography fontFamily={"Work Sans"} sx={{}}>
-                    Billing Management
-                  </Typography>
-                </Link>
-              </Stack>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion
-            sx={{
-              border: "none",
-              boxShadow: "none",
-            }}
-          >
-            <AccordionSummary
-              expandIcon={<ArrowDropDownIcon />}
-              aria-controls="panel2-content"
-              id="panel2-header"
-            >
-              <Typography>
-                {" "}
-                <Link to="/Solutions" className="navlink-link">
-                  <Box
-                    display={"flex"}
-                    justifyContent="center"
-                    alignItems={"center"}
-                  >
-                    <Typography
-                      alignSelf="center"
-                      display="inline-block"
-                      fontSize={20}
-                      fontFamily={"Work Sans"}
-                      className="navlink"
-                      sx={{
-                        transition: "all 0.4s ease-in",
-                      }}
-                    >
-                      Solutions
-                    </Typography>
-                  </Box>
-                </Link>
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Stack justifyContent={"center"} gap={1} marginLeft={"20px"}>
-                <Link to="/Solutions/By-Industries" className="popperLinks">
-                  <Typography fontFamily={"Work Sans"} sx={{}}>
-                    By Industries
-                  </Typography>
-                </Link>
-                <Link to="/Solutions/By-Size" className="popperLinks">
-                  <Typography fontFamily={"Work Sans"} sx={{}}>
-                    By Size
-                  </Typography>
-                </Link>
-                <Link to="/Solutions/By-role" className="popperLinks">
-                  <Typography fontFamily={"Work Sans"} sx={{}}>
-                    By Role
-                  </Typography>
-                </Link>
-                <Link to="/Solutions/By-usecases" className="popperLinks">
-                  <Typography fontFamily={"Work Sans"} sx={{}}>
-                    By use cases
-                  </Typography>
-                </Link>
-              </Stack>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion
-            sx={{
-              border: "none",
-              boxShadow: "none",
-            }}
-          >
-            <AccordionSummary
-              expandIcon={<ArrowDropDownIcon />}
-              aria-controls="panel2-content"
-              id="panel2-header"
-            >
-              <Typography>
-                {" "}
-                <Link to="/Resources" className="navlink-link">
-                  <Box
-                    display={"flex"}
-                    justifyContent="center"
-                    alignItems={"center"}
-                  >
-                    <Typography
-                      alignSelf="center"
-                      display="inline-block"
-                      fontSize={20}
-                      fontFamily={"Work Sans"}
-                      className="navlink"
-                      sx={{
-                        transition: "all 0.4s ease-in",
-                      }}
-                    >
-                      Resources
-                    </Typography>
-                  </Box>
-                </Link>
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Stack justifyContent={"center"} gap={1} marginLeft={"20px"}>
-                <Link to="/Resources/BecomeAPartner" className="popperLinks">
-                  <Typography fontFamily={"Work Sans"} sx={{}}>
-                    Become A Partner
-                  </Typography>
-                </Link>
-                <Link to="/Resources/Career" className="popperLinks">
-                  <Typography fontFamily={"Work Sans"} sx={{}}>
-                    Career
-                  </Typography>
-                </Link>
-                <Link to="/Resources/Blog" className="popperLinks">
-                  <Typography fontFamily={"Work Sans"} sx={{}}>
-                    Blogs
-                  </Typography>
-                </Link>
-                <Link to="/Resources/CaseStudy" className="popperLinks">
-                  <Typography fontFamily={"Work Sans"} sx={{}}>
-                    Case Study
-                  </Typography>
-                </Link>
-                <Link to="/Resources/Testimonials" className="popperLinks">
-                  <Typography fontFamily={"Work Sans"} sx={{}}>
-                    Testimonials
-                  </Typography>
-                </Link>
-                <Link to="/Resources/Videos" className="popperLinks">
-                  <Typography fontFamily={"Work Sans"} sx={{}}>
-                    Videos
-                  </Typography>
-                </Link>
-                <Link to="/Resources/faq" className="popperLinks">
-                  <Typography fontFamily={"Work Sans"} sx={{}}>
-                    Faq
-                  </Typography>
-                </Link>
-              </Stack>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion
-            sx={{
-              border: "none",
-              boxShadow: "none",
-            }}
-          >
-            <AccordionSummary aria-controls="panel2-content" id="panel2-header">
-              <Typography>
-                {" "}
-                <Link to="/Pricing" className="navlink-link">
-                  <Box
-                    display={"flex"}
-                    justifyContent="center"
-                    alignItems={"center"}
-                  >
-                    <Typography
-                      alignSelf="center"
-                      display="inline-block"
-                      fontSize={20}
-                      fontFamily={"Work Sans"}
-                      className="navlink"
-                      sx={{
-                        transition: "all 0.4s ease-in",
-                      }}
-                    >
-                      Pricing
-                    </Typography>
-                  </Box>
-                </Link>
-              </Typography>
-            </AccordionSummary>
-          </Accordion>
-          <Stack alignItems={"center"} margin={"10px auto"}>
-            <Link to={"/Login"}>
-              <Button
-                sx={{
-                  width: "120px",
-                  borderRadius: "10px",
-                  height: "5vh",
-                  "&:hover": {
-                    backgroundColor: "#F15B25",
-                    color: "white",
-                  },
-                }}
-              >
-                Login
-              </Button>
-            </Link>
-          </Stack>
-        </Stack> */}
       </Stack>
     </>
   );

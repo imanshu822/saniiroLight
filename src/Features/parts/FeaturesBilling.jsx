@@ -9,6 +9,8 @@ import CustomerFeedback from "./parts/CustomerFeedback";
 import Clock from "../../Home/parts/Clock";
 import ImprovedSales from "./parts/ImprovedSales";
 import Footer from "../../utils/Footer";
+import ProductSlider from "../../About/parts/ProductSlider";
+import { Stack } from "@mui/material";
 const FeaturesBilling = () => {
   return (
     <>
@@ -17,9 +19,25 @@ const FeaturesBilling = () => {
       <FeaturesGlance />
       <BillingSteps />
       <BestFinchers />
-      <CustomerFeedback />
+      <Stack
+        display={{
+          xs: "none",
+          lg: "flex",
+        }}
+      >
+        <CustomerFeedback />
+      </Stack>
+      <Stack
+        display={{
+          xs: "flex",
+          lg: "none",
+        }}
+      >
+        <ProductSlider />
+      </Stack>
       <Clock />
       <ImprovedSales />
+
       <Footer />
     </>
   );

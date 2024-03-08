@@ -8,27 +8,61 @@ const FeatureCard = (props) => {
         justifyContent={"center"}
         alignItems={"center"}
         sx={{
-          width: "221.77px",
-          height: "208.76px",
-          padding: "19.09px 9.54px 19.09px 9.54px",
-          borderRadius: "9.54px",
+          width: {
+            xs: "104px",
+            smm: "208.76px",
+          },
+          height: {
+            xs: "104px",
+            smm: "208.76px",
+          },
+          padding: {
+            xs: "9.54px 4.77px 9.54px 4.77px",
+            smm: "19.09px 9.54px 19.09px 9.54px",
+          },
+          borderRadius: {
+            xs: "4.77px",
+            smm: "9.54px",
+          },
+
           border: "1.19px",
-          gap: "17.89px",
+          gap: {
+            xs: "9.54px",
+            smm: "17.89px",
+          },
           background: "#FFFFFFE5",
         }}
       >
-        <img
-          src={props.billingCardData.logo}
-          alt="logo"
-          width={"114px"}
-          height={"109px"}
-        />
+        <Stack
+          width={{
+            xs: "57px",
+            smm: "114px",
+          }}
+          height={{
+            xs: "54.5px",
+            smm: "109px",
+          }}
+        >
+          <img
+            src={props.billingCardData.logo}
+            alt="logo"
+            width={"100%"}
+            height={"100%"}
+          />
+        </Stack>
+
         <Typography
           sx={{
             fontFamily: "Work Sans",
-            fontSize: "16px",
+            fontSize: {
+              xs: "8px",
+              smm: "16px",
+            },
             fontWeight: 600,
-            lineHeight: "18px",
+            lineHeight: {
+              xs: "9px",
+              smm: "18px",
+            },
             letterSpacing: "0em",
             textAlign: "center",
           }}

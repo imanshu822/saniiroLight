@@ -2,34 +2,54 @@ import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
 import NavLight from "../../../Navbar/NavLight";
 // import TickMark from "../assets/TickMark.svg";
-// import Button from "../../../utils/Button";
+import Button from "../../../utils/Button";
 import dotedSmImg from "../../../assets/Group 62557.png";
 import dotedMdImg from "../../../assets/Group 62562.png";
 import mediaImg from "../../../assets/image 124.png";
+
 const BillingBanner = () => {
   return (
     <Stack
-      height={"782px"}
+      height={{
+        xs: "100%",
+        lg: "120vh",
+      }}
       position={"relative"}
       bgcolor={"#052973"}
       className="textured-background"
     >
       <NavLight />
-      <Stack margin={"0px auto"}>
-        <Stack width={"100%"}>
-          <Stack marginTop={"40px"} sx={{ width: "360px", height: "10px" }}>
+      <Stack
+        margin={"0px auto"}
+        maxWidth={"1200px"}
+        position={"relative"}
+        zIndex={12}
+      >
+        <Stack
+          margin={"0 auto"}
+          width={{
+            xs: "90%",
+            lg: "95%",
+            xl: "100%",
+          }}
+        >
+          {" "}
+          {/* Add padding for inner content */}
+          <Stack>
             <Typography
-              sx={[
-                {
-                  fontFamily: "Work Sans",
-                  fontSize: "12px",
-                  fontWeight: 700,
-                  lineHeight: "10px",
-                  letterSpacing: "0em",
-                  textAlign: "left",
-                  color: "white",
+              sx={{
+                fontFamily: "Work Sans",
+                fontSize: {
+                  xs: "8px",
+                  lg: "12px",
+                  xl: "18px",
                 },
-              ]}
+                fontWeight: 700,
+                lineHeight: "10px",
+                letterSpacing: "0em",
+                textAlign: "left",
+                color: "white",
+              }}
             >
               Features {`>`} SalesForseAutomation {`>`}{" "}
               <span style={{ fontWeight: "bold" }}>LEAD MANAGEMENT</span>
@@ -38,20 +58,25 @@ const BillingBanner = () => {
           <Stack
             color={"white"}
             margin={"0px auto"}
-            width={"1077px"}
+            width={"100%"}
             position={"relative"}
           >
             <Stack
-              marginTop={"65px"}
+              marginTop={{
+                xs: "2rem",
+                lg: "3rem",
+                xl: "4rem",
+              }}
               direction={"row"}
               justifyContent={"center"}
+              alignItems={"center"}
               gap={1}
             >
               <Typography
                 width={"50%"}
                 textAlign={"right"}
                 textTransform={"uppercase"}
-                fontSize={"120px"}
+                fontSize={"calc(6vw + 10px)"}
                 letterSpacing={1}
                 fontWeight={"bold"}
                 color={"transparent"}
@@ -63,7 +88,7 @@ const BillingBanner = () => {
               <Typography
                 width={"50%"}
                 textTransform={"uppercase"}
-                fontSize={"60px"}
+                fontSize={"calc(3vw + 10px)"}
                 letterSpacing={1}
                 fontWeight={"bold"}
                 color={"white"}
@@ -74,16 +99,18 @@ const BillingBanner = () => {
               </Typography>
             </Stack>
 
-            <Stack marginTop={"17px"}>
+            <Stack marginTop={"1rem"}>
               <Typography
                 sx={{
                   fontFamily: "Work Sans",
-                  fontSize: "21px",
+                  fontSize: "calc(0.8vw + 0.6rem)", // Responsive font size
                   fontWeight: 400,
-                  lineHeight: "25px",
+                  lineHeight: "1.2",
                   letterSpacing: "0em",
                   textAlign: "center",
                   color: "#B0B0B0",
+                  width: "90%",
+                  margin: "0px auto",
                 }}
               >
                 Billing Software, integrated with inventory management software
@@ -98,64 +125,106 @@ const BillingBanner = () => {
             </Stack>
             <Stack margin={"0px auto"}>
               <Box
+                alignSelf={"center"}
                 sx={{
-                  width: "141px",
-                  height: "33px",
-                  padding: "4px 20px 4px 20px",
-                  marginTop: "20px",
+                  width: "80%",
+                  padding: "0.5rem 1rem",
+                  marginTop: "2rem",
                   backgroundColor: "#F15B25",
                 }}
               >
                 <Typography
                   sx={{
                     fontFamily: "Work Sans",
-                    fontSize: "18px",
+                    fontSize: "calc(0.6vw + 0.5rem)",
                     fontWeight: 600,
-                    lineHeight: "25px",
+                    lineHeight: "1.2",
                     letterSpacing: "0em",
-                    padding: "4px 20px 4px 20px",
-                    textAlign: "left",
+                    padding: "0.5rem 1rem",
+                    textAlign: "center",
                   }}
                 >
                   Learn More
                 </Typography>
               </Box>
             </Stack>
-            <Box position={"absolute"} bottom={"-25%"} left={"100px"}>
-              <img
-                width={"106px"}
-                height={"99px"}
-                src={dotedSmImg}
-                alt="icon"
-              />
-            </Box>
-            <Box
-              zIndex={1}
-              position={"absolute"}
-              bottom={"-120.5%"}
-              right={"5%"}
-            >
-              <img
-                width={"223px"}
-                height={"209px"}
-                src={dotedMdImg}
-                alt="icon"
-              />
-            </Box>
-            <Box
-              zIndex={2}
-              position={"absolute"}
-              bottom={"-105.5%"}
-              left={"14%"}
-            >
-              <img
-                width={"792px"}
-                height={"371px"}
-                src={mediaImg}
-                alt="media player"
-              />
-            </Box>
-          </Stack>
+          </Stack>{" "}
+          <Box
+            display={{
+              xs: "none",
+              lg: "block",
+            }}
+            position={"absolute"}
+            bottom={{
+              lg: "-97%",
+              xl: "-56%",
+            }}
+            left={{
+              lg: "15%",
+              xl: "11%",
+            }}
+            width={"10%"}
+          >
+            <img width={"100%"} src={dotedSmImg} alt="icon" />
+          </Box>
+          <Box
+            display={{
+              xs: "none",
+              lg: "block",
+            }}
+            zIndex={1}
+            position={"absolute"}
+            bottom={{
+              lg: "-185%",
+              xl: "-164%",
+            }}
+            right={{
+              lg: "13%",
+              xl: "5%",
+            }}
+            width={"15%"}
+          >
+            <img width={"100%"} src={dotedMdImg} alt="icon" />
+          </Box>
+          <Box
+            display={{
+              xs: "none",
+              lg: "block",
+            }}
+            zIndex={2}
+            position={"absolute"}
+            bottom={{
+              lg: "-166%",
+              xl: "-138%",
+            }}
+            left={{
+              lg: "20%",
+              xl: "16%",
+            }}
+            width={{
+              lg: "60%",
+              xl: "70%",
+            }}
+          >
+            <img width={"100%"} src={mediaImg} alt="media player" />
+          </Box>
+          <Box
+            display={{
+              xs: "block",
+              lg: "none",
+            }}
+            width={{
+              xs: "100%",
+              md: "70%",
+            }}
+            pt={{
+              xs: "2rem",
+              md: "2rem",
+            }}
+            margin={"0 auto 2rem"}
+          >
+            <img width={"100%"} src={mediaImg} alt="media player" />
+          </Box>
         </Stack>
       </Stack>
     </Stack>
