@@ -5,23 +5,39 @@ import "../../Solutions/IndustriesByusecases/Solution.css";
 import ResourceGallery from "./ResourceGallery";
 const ResourceBanner = () => {
   return (
-    <Stack
-      bgcolor={"#052973"}
-      className="textured-background"
-      height={"1800px"}
-    >
+    <Stack bgcolor={"#052973"} className="textured-background" height={"100%"}>
       <NavLight />
       <Stack gap={4} pb={10} margin={"0 auto"}>
         <Stack
-          p={"50px 0px 0 0"}
+          pt={{
+            xs: "20px",
+            sm: "20px",
+            md: "20px",
+            lg: "40px",
+          }}
+          width={"95%"}
+          m={"0 auto"}
           gap={2}
           alignItems={"center"}
           justifyContent={"center"}
         >
           <Typography
+            fontFamily={{
+              xs: "monospace",
+              md: "sans-serif",
+            }}
+            textAlign={"center"}
             textTransform={"uppercase"}
-            fontSize={"62px"}
-            letterSpacing={1}
+            fontSize={{
+              xs: "30px",
+              sm: "40px",
+              md: "55px",
+              lg: "62px",
+            }}
+            letterSpacing={{
+              xs: 0.5,
+              md: 1,
+            }}
             fontWeight={"bold"}
             color={"transparent"}
             lineHeight={1}
@@ -32,7 +48,12 @@ const ResourceBanner = () => {
           <Typography
             sx={{
               fontFamily: "Work Sans",
-              fontSize: "22px",
+              fontSize: {
+                xs: "16px",
+                sm: "18px",
+                md: "20px",
+                lg: "24px",
+              },
               fontWeight: 600,
               lineHeight: "22px",
               letterSpacing: "0em",

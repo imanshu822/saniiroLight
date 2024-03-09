@@ -22,103 +22,118 @@ const CareerBanner = () => {
   };
 
   return (
-    <Stack position="relative" height="100%">
-      <Box
-        component="img"
-        sx={{
-          width: "100%",
-          maxWidth: "100%",
-          height: "auto",
-        }}
-        alt="Banner Image"
-        src={BannerImg}
-      />
-      <Stack
-        sx={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          width: "860px",
-          height: "380px",
-          textAlign: "center",
-          backgroundColor: "white",
-          justifyContent: "center",
-        }}
-      >
-        <Content
-          department={department}
-          countries={countries}
-          handleChangeDepartment={handleChangeDepartment}
-          handleChangeCountries={handleChangeCountries}
+    <>
+      {/* <Stack position="relative" height="100%">
+        <Box
+          component="img"
+          sx={{
+            width: "100%",
+            maxWidth: "100%",
+            height: "auto",
+          }}
+          alt="Banner Image"
+          src={BannerImg}
         />
-      </Stack>
-    </Stack>
-  );
-};
+        <Stack
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: "860px",
+            height: "380px",
+            textAlign: "center",
+            backgroundColor: "white",
+            justifyContent: "center",
+          }}
+        >
+          <Content
+            department={department}
+            countries={countries}
+            handleChangeDepartment={handleChangeDepartment}
+            handleChangeCountries={handleChangeCountries}
+          />
+        </Stack>
+      </Stack> */}
 
-const Content = ({
-  department,
-  countries,
-  handleChangeDepartment,
-  handleChangeCountries,
-}) => {
-  return (
-    <Stack
-      p={2}
-      direction="column"
-      alignItems="center"
-      justifyContent="space-evenly"
-      gap={1}
-    >
-      <Typography
-        sx={{
-          width: "690px",
-          height: "50px",
-          fontFamily: "Work Sans",
-          fontSize: "50px",
-          fontWeight: 600,
-          lineHeight: "50px",
-          letterSpacing: "0em",
-          textAlign: "center",
-          color: "#4DB267",
-          textTransform: "uppercase",
+      <Stack position="relative" height="100%">
+        <Box
+          component="img"
+          sx={{
+            width: "100%",
+            maxWidth: "100%",
+            height: "auto",
+          }}
+          alt="Banner Image"
+          src={BannerImg}
+        />
+        <Stack
+          sx={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            margin: "auto",
+            width: {
+              xs: "60%",
+              sm: "60%",
+              md: "60%",
+              lg: "60%",
+            },
+            height: {
+              xs: "70%",
+            },
+            textAlign: "center",
+            backgroundColor: "white",
+            justifyContent: "center",
+          }}
+        >
+          <Content
+            department={department}
+            countries={countries}
+            handleChangeDepartment={handleChangeDepartment}
+            handleChangeCountries={handleChangeCountries}
+          />
+        </Stack>
+      </Stack>
+
+      <Stack
+        display={{
+          xs: "block",
+          lg: "none",
         }}
+        mt={5}
+        width={"90%"}
+        margin={"15px auto"}
       >
-        Want to have an impact
-      </Typography>
-      <Typography
-        sx={{
-          fontFamily: "Work Sans",
-          fontSize: "50px",
-          fontWeight: 600,
-          lineHeight: "53px",
-          letterSpacing: "0em",
-          textAlign: "center",
-          color: "#052973",
-        }}
-      >
-        while having fun?
-      </Typography>
-      <Typography
-        sx={{
-          fontFamily: "Work Sans",
-          fontSize: "18px",
-          fontWeight: 400,
-          lineHeight: "27px",
-          letterSpacing: "0em",
-          textAlign: "center",
-        }}
-      >
-        Master in Business Administration, Civil Engineering, or Computer
-        Sciences.
-      </Typography>
-      <Stack>
+        <Typography
+          sx={{
+            width: "100%",
+            fontFamily: "Work Sans",
+            fontSize: {
+              xs: "16px",
+              smm: "20px",
+              md: "32px",
+              lg: "37px",
+              xl: "50px",
+            },
+            fontWeight: 600,
+            letterSpacing: "0em",
+            textAlign: "center",
+            color: "#052973",
+          }}
+        >
+          Search Jobs
+        </Typography>
         <TextField
           sx={{
-            width: "540px",
-            height: "50px",
-            my: 2,
+            width: "100%",
+            alignSelf: "center",
+            my: {
+              xs: 1,
+              xl: 2,
+            },
             position: "relative",
           }}
           id="outlined-basic"
@@ -143,7 +158,13 @@ const Content = ({
         <Box
           display="flex"
           gap={2}
-          sx={{ minWidth: "540px", textAlign: "left" }}
+          sx={{
+            minWidth: {
+              md: "400px",
+              lg: "540px",
+            },
+            textAlign: "left",
+          }}
         >
           <FormSelect
             id="department-select"
@@ -167,7 +188,161 @@ const Content = ({
           </FormSelect>
         </Box>
       </Stack>
-    </Stack>
+    </>
+  );
+};
+
+const Content = ({
+  department,
+  countries,
+  handleChangeDepartment,
+  handleChangeCountries,
+}) => {
+  return (
+    <>
+      <Stack
+        p={2}
+        direction="column"
+        alignItems="center"
+        justifyContent="space-evenly"
+        gap={{
+          xs: 0,
+          lg: 0,
+        }}
+      >
+        <Typography
+          sx={{
+            width: "100%",
+            fontFamily: "Work Sans",
+            fontSize: {
+              xs: "8px",
+              sm: "14px",
+              smm: "20px",
+              md: "32px",
+              lg: "37px",
+              xl: "50px",
+            },
+            fontWeight: 600,
+            letterSpacing: "0em",
+            textAlign: "center",
+            color: "#4DB267",
+            textTransform: "uppercase",
+          }}
+        >
+          Want to have an impact
+        </Typography>
+        <Typography
+          sx={{
+            width: "100%",
+            fontFamily: "Work Sans",
+            fontSize: {
+              xs: "8px",
+              sm: "14px",
+              smm: "20px",
+              md: "32px",
+              lg: "37px",
+              xl: "50px",
+            },
+            fontWeight: 600,
+            letterSpacing: "0em",
+            textAlign: "center",
+            color: "#052973",
+          }}
+        >
+          while having fun?
+        </Typography>
+        <Typography
+          sx={{
+            width: "100%",
+            fontFamily: "Work Sans",
+            fontSize: {
+              xs: "6px",
+              sm: "10px",
+              smm: "12px",
+              md: "14px",
+            },
+            fontWeight: 400,
+            letterSpacing: "0em",
+            textAlign: "center",
+          }}
+        >
+          Master in Business Administration, Civil Engineering, or Computer
+          Sciences.
+        </Typography>
+        <Stack
+          margin={"0 auto"}
+          display={{
+            xs: "none",
+            lg: "flex",
+          }}
+        >
+          <TextField
+            sx={{
+              minWidth: {
+                md: "400px",
+                lg: "540px",
+              },
+              alignSelf: "center",
+              my: {
+                xs: 1,
+                xl: 2,
+              },
+              position: "relative",
+            }}
+            id="outlined-basic"
+            label="Search Job"
+            variant="outlined"
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="start">
+                  <SearchIcon
+                    sx={{
+                      color: "gray",
+                      position: "absolute",
+                      right: "10px",
+                      top: "50%",
+                      transform: "translateY(-50%)",
+                    }}
+                  />
+                </InputAdornment>
+              ),
+            }}
+          />
+          <Box
+            display="flex"
+            gap={2}
+            sx={{
+              minWidth: {
+                md: "400px",
+                lg: "540px",
+              },
+              textAlign: "left",
+            }}
+          >
+            <FormSelect
+              id="department-select"
+              label="All Department"
+              value={department}
+              onChange={handleChangeDepartment}
+            >
+              <MenuItem value={10}>Department 1</MenuItem>
+              <MenuItem value={20}>Department 2</MenuItem>
+              <MenuItem value={30}>Department 3</MenuItem>
+            </FormSelect>
+            <FormSelect
+              id="countries-select"
+              label="All Countries"
+              value={countries}
+              onChange={handleChangeCountries}
+            >
+              <MenuItem value={10}>Country 1</MenuItem>
+              <MenuItem value={20}>Country 2</MenuItem>
+              <MenuItem value={30}>Country 3</MenuItem>
+            </FormSelect>
+          </Box>
+        </Stack>
+      </Stack>
+    </>
   );
 };
 

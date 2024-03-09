@@ -18,7 +18,12 @@ const JobCard = ({ title, description, opening, location, department }) => {
     >
       <Stack
         gap={2}
-        marginLeft={"44px"}
+        marginLeft={{
+          xs: "20px",
+          sm: "20px",
+          md: "20px",
+          lg: "44px",
+        }}
         sx={{
           marginTop: "20px",
         }}
@@ -27,7 +32,10 @@ const JobCard = ({ title, description, opening, location, department }) => {
           <Typography
             sx={{
               fontFamily: "Work Sans",
-              fontSize: "40px",
+              fontSize: {
+                xs: "24px",
+                lg: "40px",
+              },
               fontWeight: 500,
               lineHeight: "43px",
               letterSpacing: "0em",
@@ -41,14 +49,26 @@ const JobCard = ({ title, description, opening, location, department }) => {
         <Box>
           <Typography
             sx={{
+              textAlign: {
+                xs: "justify",
+              },
               fontFamily: "Work Sans",
               fontSize: "16px",
               fontWeight: 400,
               lineHeight: "22px",
               letterSpacing: "0em",
-              textAlign: "left",
-              marginRight: "37px",
-              paddingRight: "80px",
+              marginRight: {
+                xs: "20px",
+                sm: "20px",
+                md: "20px",
+                lg: "37px",
+              },
+              paddingRight: {
+                xs: "20px",
+                sm: "20px",
+                md: "20px",
+                lg: "80px",
+              },
               paddingBottom: "20px",
               borderBottom: "1px solid #0000001F",
             }}
@@ -62,7 +82,12 @@ const JobCard = ({ title, description, opening, location, department }) => {
           alignItems={"end"}
           gap={2}
           sx={{
-            marginRight: "37px",
+            marginRight: {
+              xs: "20px",
+              sm: "20px",
+              md: "20px",
+              lg: "37px",
+            },
             paddingBottom: "20px",
             borderBottom: "1px solid #0000001F",
           }}
@@ -118,7 +143,12 @@ const JobCard = ({ title, description, opening, location, department }) => {
             direction={"row"}
             gap={2}
             sx={{
-              marginRight: "80px",
+              marginRight: {
+                xs: "20px",
+                sm: "20px",
+                md: "20px",
+                lg: "80px",
+              },
             }}
           >
             <AddIcon
@@ -148,19 +178,31 @@ const JobCard = ({ title, description, opening, location, department }) => {
           justifyContent={"end"}
           gap={2}
           sx={{
-            marginRight: "70px",
+            marginRight: {
+              xs: "20px",
+              sm: "20px",
+              md: "20px",
+              lg: "70px",
+            },
             mb: "20px",
           }}
         >
           <Button
             sx={{
-              width: "Hug (138px)",
-              height: "Hug (46px)",
-              padding: "14px 20px 14px 20px",
+              width: {
+                xs: "120px",
+                lg: "160px",
+              },
+              height: "46px",
+              padding: {
+                xs: "7px 10px 7px 10px",
+                lg: "14px 20px 14px 20px",
+              },
               borderRadius: "4px",
               gap: "10px",
               textAlign: "center",
               color: "#F15B25",
+              border: "1px solid #F15B25",
               "&:hover": {
                 backgroundColor: "#F15B25",
                 color: "#FFFFFF",
@@ -170,7 +212,10 @@ const JobCard = ({ title, description, opening, location, department }) => {
             <Typography
               sx={{
                 fontFamily: "Work Sans",
-                fontSize: "19px",
+                fontSize: {
+                  xs: "14px",
+                  lg: "19px",
+                },
                 fontWeight: 600,
                 lineHeight: "18px",
                 letterSpacing: "0em",
@@ -184,8 +229,11 @@ const JobCard = ({ title, description, opening, location, department }) => {
           <Link to="/Resources/Career/job-details" onClick={handleClick}>
             <Button
               sx={{
-                width: "Hug (138px)",
-                height: "Hug (46px)",
+                width: {
+                  xs: "130px",
+                  lg: "160px",
+                },
+                height: "46px",
                 padding: "14px 20px 14px 20px",
                 borderRadius: "4px",
                 gap: "10px",
@@ -201,7 +249,10 @@ const JobCard = ({ title, description, opening, location, department }) => {
               <Typography
                 sx={{
                   fontFamily: "Work Sans",
-                  fontSize: "19px",
+                  fontSize: {
+                    xs: "14px",
+                    lg: "19px",
+                  },
                   fontWeight: 600,
                   lineHeight: "18px",
                   letterSpacing: "0em",

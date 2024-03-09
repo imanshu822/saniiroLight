@@ -64,7 +64,7 @@ const Nav = () => {
         p={"20px 90px"}
         alignItems={"center"}
       >
-        <Stack width={{xl:"19%",md:"25%",sm:"35%"}}>
+        <Stack width={{ xl: "19%", md: "25%", sm: "35%" }}>
           <Link to={"/"}>
             <img src={lo} alt="" style={{ width: "100%", height: "100%" }} />
           </Link>
@@ -519,7 +519,7 @@ const Nav = () => {
           alignItems={"center"}
           padding={"20px 29px"}
         >
-          <Stack width={{xs:"45%",md:"30%"}}>
+          <Stack width={{ xs: "45%", md: "30%" }}>
             <Link to={"/"}>
               <img src={lo} alt="" width={"100%"} height={"100%"} />
             </Link>

@@ -18,46 +18,126 @@ const JobSection = () => {
 
   return (
     <>
-      <Box
-        display="flex"
-        flexDirection="row"
-        sx={{ margin: "100px 100px 50px 100px" }}
-        gap={"21px"}
+      <Stack
+        display={{
+          xs: "none",
+          lg: "flex",
+        }}
       >
-        <Stack
+        <Box
           display="flex"
           flexDirection="row"
-          sx={{
-            width: "75%",
-            margin: "auto",
+          sx={{ margin: "100px 100px 50px 100px" }}
+          gap={"21px"}
+        >
+          <Stack
+            display="flex"
+            flexDirection="row"
+            sx={{
+              width: "73%",
+              margin: "auto",
+            }}
+          >
+            <Stack direction={"column"} gap={3}>
+              {currentJobs.map((job, index) => (
+                <JobCard
+                  key={index}
+                  title={job.Title}
+                  description={job.Description}
+                  opening={job.Opening}
+                  location={job.Location}
+                  department={job.Department}
+                />
+              ))}
+            </Stack>
+          </Stack>
+          <Stack
+            sx={{
+              width: "29%",
+            }}
+          >
+            <SocialMediaCard />
+          </Stack>
+        </Box>
+        <CustomPagination
+          jobsPerPage={jobsPerPage}
+          totalJobs={Jobs.length}
+          paginate={paginate}
+        />
+      </Stack>
+
+      <Stack
+        display={{
+          xs: "flex",
+          lg: "none",
+        }}
+      >
+        <Box
+          flexDirection="row"
+          margin={"0 auto"}
+          gap={"21px"}
+          width={{
+            xs: "100%",
+            lg: "95%",
           }}
         >
-          <Stack direction={"column"} gap={3}>
-            {currentJobs.map((job, index) => (
-              <JobCard
-                key={index}
-                title={job.Title}
-                description={job.Description}
-                opening={job.Opening}
-                location={job.Location}
-                department={job.Department}
-              />
-            ))}
+          <Stack
+            flexDirection="row"
+            sx={{
+              width: {
+                xs: "95%",
+                lg: "75%",
+                xl: "75%",
+              },
+              margin: "0 auto",
+            }}
+          >
+            <Stack direction={"column"} gap={3}>
+              {currentJobs.map((job, index) => (
+                <JobCard
+                  key={index}
+                  title={job.Title}
+                  description={job.Description}
+                  opening={job.Opening}
+                  location={job.Location}
+                  department={job.Department}
+                />
+              ))}
+            </Stack>
           </Stack>
-        </Stack>
+          <Stack
+            display={{
+              xs: "none",
+              sm: "none",
+              md: "none",
+              lg: "block",
+              xl: "block",
+            }}
+            sx={{
+              width: "25%",
+            }}
+          ></Stack>
+        </Box>
+        <CustomPagination
+          jobsPerPage={jobsPerPage}
+          totalJobs={Jobs.length}
+          paginate={paginate}
+        />
         <Stack
-          sx={{
-            width: "25%",
+          display={{
+            xs: "block",
+            sm: "block",
+            md: "block",
+            lg: "none",
+            xl: "none",
           }}
+          margin={"0 auto"}
+          mb={2}
+          width={"95%"}
         >
           <SocialMediaCard />
         </Stack>
-      </Box>
-      <CustomPagination
-        jobsPerPage={jobsPerPage}
-        totalJobs={Jobs.length}
-        paginate={paginate}
-      />
+      </Stack>
     </>
   );
 };
