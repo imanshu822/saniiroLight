@@ -15,13 +15,20 @@ const IndustriesByrole = () => {
     <>
       <Nav />
 
-      <Stack gap={10}>
+      <Stack
+        gap={{
+          xs: "20px",
+          md: "40px",
+          lg: "60px",
+        }}
+      >
         <Industry1 />
         <Industry2 />
         <Industry3 />
         <Industry4 />
         <Industry5 />
-        <Industry6 /> <Signupfree />
+        <Industry6 />
+        <Signupfree />
       </Stack>
       <Footer />
     </>

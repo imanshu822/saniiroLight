@@ -4,8 +4,14 @@ import BookImg from "../../../assets/noun-pos-payment-311044 1.png";
 const GlassCard = () => {
   return (
     <Stack
-      width={"229px"}
-      height={"216px"}
+      width={{
+        xs: "125.5px",
+        md: "229px",
+      }}
+      height={{
+        xs: "140px",
+        md: "216px",
+      }}
       gap={2}
       alignItems={"center"}
       justifyContent={"center"}
@@ -26,7 +32,10 @@ const GlassCard = () => {
           width: "130px",
           height: "36px",
           fontFamily: "Work Sans",
-          fontSize: "16px",
+          fontSize: {
+            xs: "14px",
+            md: "16px",
+          },
           fontWeight: 600,
           lineHeight: "18px",
           letterSpacing: "0em",
@@ -38,7 +47,10 @@ const GlassCard = () => {
       <Typography
         sx={{
           fontFamily: "Work Sans",
-          fontSize: "12px",
+          fontSize: {
+            xs: "10px",
+            md: "12px",
+          },
           fontWeight: 500,
           lineHeight: "13px",
           letterSpacing: "0em",

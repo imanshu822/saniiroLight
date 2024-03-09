@@ -2,22 +2,32 @@ import { Stack, Typography } from "@mui/material";
 import React from "react";
 import BgSvg01 from "../../assets/BgSvg01.jpeg";
 import NavLight from "../../Navbar/NavLight";
-import "./Solution.css"
+import "./Solution.css";
 const Industries = () => {
-  
   return (
     <Stack bgcolor={"#052973"} className="textured-background">
       <NavLight />
       <Stack
-        p={"100px 0px 0 0"}
+        pt={{
+          xs: "50px",
+          lg: "100px",
+        }}
         gap={2}
-        direction={"row"}
+        direction={{
+          xs: "column",
+          lg: "row",
+        }}
         alignItems={"center"}
         justifyContent={"center"}
       >
         <Typography
+          fontFamily={"monospace"}
           textTransform={"uppercase"}
-          fontSize={"75px"}
+          fontSize={{
+            xs: "55px",
+            md: "60px",
+            lg: "75px",
+          }}
           letterSpacing={1}
           fontWeight={"bold"}
           color={"transparent"}
@@ -28,10 +38,16 @@ const Industries = () => {
         </Typography>
         <Typography
           textTransform={"uppercase"}
-          fontSize={"75px"}
+          p={"0px 20px"}
+          fontSize={{
+            xs: "55px",
+            md: "60px",
+            lg: "75px",
+          }}
           color={"white"}
           fontWeight={900}
           lineHeight={0.9}
+          textAlign={"center"}
           letterSpacing={"0.05em"}
         >
           CRM USE CASES
@@ -39,8 +55,15 @@ const Industries = () => {
       </Stack>
       <Typography
         color={"white"}
-        fontSize={"18px"}
-        p={"40px 100px 85px 100px"}
+        fontSize={{
+          xs: "14px",
+          md: "16px",
+          lg: "18px",
+        }}
+        p={{
+          xs: "30px",
+          lg: "40px 100px 85px 100px",
+        }}
         textAlign={"center"}
       >
         Do you need a widget that geolocates your customers on a map? Or a

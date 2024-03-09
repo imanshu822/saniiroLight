@@ -9,11 +9,11 @@ const FeatureCard = (props) => {
         alignItems={"center"}
         sx={{
           width: {
-            xs: "104px",
+            xs: "133px",
             smm: "208.76px",
           },
           height: {
-            xs: "104px",
+            xs: "132px",
             smm: "208.76px",
           },
           padding: {
@@ -55,14 +55,15 @@ const FeatureCard = (props) => {
           sx={{
             fontFamily: "Work Sans",
             fontSize: {
-              xs: "8px",
+              xs: "11px",
               smm: "16px",
             },
             fontWeight: 600,
             lineHeight: {
-              xs: "9px",
+              xs: "10px",
               smm: "18px",
             },
+            lineHeight: "18px",
             letterSpacing: "0em",
             textAlign: "center",
           }}

@@ -6,6 +6,7 @@ import Button from "../../../utils/Button";
 import dotedSmImg from "../../../assets/Group 62557.png";
 import dotedMdImg from "../../../assets/Group 62562.png";
 import mediaImg from "../../../assets/image 124.png";
+import ReactPlayer from "react-player";
 
 const BillingBanner = () => {
   return (
@@ -73,10 +74,11 @@ const BillingBanner = () => {
               gap={1}
             >
               <Typography
+                fontFamily={"monospace"}
                 width={"50%"}
                 textAlign={"right"}
                 textTransform={"uppercase"}
-                fontSize={"calc(6vw + 10px)"}
+                fontSize={"calc(6vw + 13px)"}
                 letterSpacing={1}
                 fontWeight={"bold"}
                 color={"transparent"}
@@ -205,8 +207,29 @@ const BillingBanner = () => {
               lg: "60%",
               xl: "70%",
             }}
+            height={{
+              xs: "12rem",
+              sm: "15rem",
+              md: "20rem",
+              xl: "25rem",
+            }}
+            border={"2px solid white"}
           >
-            <img width={"100%"} src={mediaImg} alt="media player" />
+            <ReactPlayer
+              controls
+              url="https://www.youtube.com/watch?v=SlhESAKF1Tk"
+              width="100%"
+              height="100%"
+              // controls={true}
+              playing
+              light={true}
+              sx={{ borderRadius: "10px" }}
+              config={{
+                youtube: {
+                  playerVars: { showinfo: 1 },
+                },
+              }}
+            ></ReactPlayer>
           </Box>
           <Box
             display={{
@@ -215,7 +238,12 @@ const BillingBanner = () => {
             }}
             width={{
               xs: "100%",
-              md: "70%",
+              md: "80%",
+            }}
+            height={{
+              xs: "12rem",
+              sm: "15rem",
+              md: "20rem",
             }}
             pt={{
               xs: "2rem",
@@ -223,7 +251,21 @@ const BillingBanner = () => {
             }}
             margin={"0 auto 2rem"}
           >
-            <img width={"100%"} src={mediaImg} alt="media player" />
+            <ReactPlayer
+              controls
+              url="https://www.youtube.com/watch?v=SlhESAKF1Tk"
+              width="100%"
+              height="100%"
+              // controls={true}
+              playing
+              light={true}
+              sx={{ borderRadius: "10px" }}
+              config={{
+                youtube: {
+                  playerVars: { showinfo: 1 },
+                },
+              }}
+            ></ReactPlayer>
           </Box>
         </Stack>
       </Stack>

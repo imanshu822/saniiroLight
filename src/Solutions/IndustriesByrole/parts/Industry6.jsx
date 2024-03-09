@@ -10,13 +10,23 @@ const Industry6 = () => {
     setIsVideoPlaying(true);
   };
   return (
-    <Stack>
+    <Stack
+      width={{
+        xs: "90%",
+        md: "80%",
+      }}
+      m={"0 auto"}
+    >
       <Stack>
         <Typography
           mb={"20px"}
           sx={{
             fontFamily: "Work Sans",
-            fontSize: "35px",
+            fontSize: {
+              xs: "20px",
+              sm: "25px",
+              md: "30px",
+            },
             fontWeight: 700,
             lineHeight: "37px",
             letterSpacing: "0em",
@@ -25,53 +35,31 @@ const Industry6 = () => {
         >
           Our customers love us
         </Typography>
-        <Stack alignItems={"center"} margin={"0px auto"}>
-          <div
-            style={{
-              position: "relative",
-              display: "flex",
-              alignItems: "center",
+        <Stack
+          margin={"0 auto"}
+          width={"95%"}
+          height={{
+            xs: "200px",
+            sm: "300px",
+            md: "500px",
+          }}
+          border={"2px solid black"}
+        >
+          <ReactPlayer
+            controls
+            url="https://www.youtube.com/watch?v=SlhESAKF1Tk"
+            width="100%"
+            height="100%"
+            // controls={true}
+            playing
+            light={true}
+            sx={{ borderRadius: "10px" }}
+            config={{
+              youtube: {
+                playerVars: { showinfo: 1 },
+              },
             }}
-          >
-            {isVideoPlaying ? (
-              <ReactPlayer
-                url="https://www.example.com/your-video-url.mp4" // Replace with your video URL
-                controls
-                width="1024px"
-                height="537px"
-              />
-            ) : (
-              <Stack alignItems={"center"}>
-                <img
-                  src={handShack}
-                  alt="Thumbnail"
-                  style={{
-                    width: "1024px",
-                    height: "537px",
-                    objectFit: "cover",
-                  }}
-                />
-                <Box
-                  onClick={playVideo}
-                  position={"absolute"}
-                  width={"150px"}
-                  height={"150px"}
-                  top={"50%"}
-                  left={"50%"}
-                  bgcolor={"#D9D9D9"}
-                  borderRadius={"50%"}
-                  border={"8px solid #FB5555"}
-                  sx={{ transform: "translate(-50%, -50%)", cursor: "pointer" }}
-                >
-                  <img
-                    src={Polygon}
-                    alt=""
-                    style={{ position: "absolute", top: "25%", left: "38%" }}
-                  />
-                </Box>
-              </Stack>
-            )}
-          </div>
+          ></ReactPlayer>
         </Stack>
       </Stack>
     </Stack>

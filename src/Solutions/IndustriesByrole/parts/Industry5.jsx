@@ -17,15 +17,20 @@ const Industry5 = () => {
       className="textured-backgroundd"
     >
       <Stack
-        width={"780px"}
-        height={"1150px"}
+        width={"80%"}
+        height={"100%"}
         margin={"60px auto 17px"}
         color={"white"}
       >
         <Typography
           sx={{
             fontFamily: "Work Sans",
-            fontSize: "35px",
+            fontSize: {
+              xs: "18px",
+              sm: "20px",
+              md: "25px",
+              lg: "30px",
+            },
             fontWeight: 700,
             lineHeight: "37px",
             letterSpacing: "0em",
@@ -48,7 +53,7 @@ const Industry5 = () => {
           by integrating with more than 100 popular business apps that you use
           everyday.
         </Typography>
-        <Stack position={"relative"}>
+        {/* <Stack position={"relative"}>
           <Box
             component="img"
             position={"absolute"}
@@ -83,6 +88,7 @@ const Industry5 = () => {
             placeholder="Integrates with the apps you use everyday"
             type="text"
             style={{
+              alignSelf: "center",
               width: "88%",
               height: "40px",
               padding: "10px 55px",
@@ -95,11 +101,15 @@ const Industry5 = () => {
               margin: "20px 0",
             }}
           />
-        </Stack>
+        </Stack> */}
         <Stack
+          justifyContent={"center"}
           direction={"row"}
           flexWrap={"wrap"}
-          gap={"28px"}
+          gap={{
+            xs: 2,
+            md: "28px",
+          }}
           marginTop={"40px"}
         >
           <GlassCard />
