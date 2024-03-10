@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import BookImg from "./assets/MaskGroup.png";
 
 const Industry2 = () => {
@@ -17,24 +17,55 @@ const Industry2 = () => {
       direction="row"
       flexWrap="wrap"
       justifyContent="center"
-      gap={3}
+      gap={{
+        xs: 1,
+        sm: 2,
+        md: 3,
+      }}
       p={3}
     >
       {lists.map((item, index) => (
         <Stack
+          p={2}
           key={index}
           justifyContent="center"
           alignItems="left"
           border="1px solid black"
           bgcolor={item.bgcolor}
-          width="12%"
-          height="180px"
+          width={{
+            xs: "32%",
+            sm: "36%",
+            md: "25%",
+            lg: "12%",
+          }}
+          height={{
+            xs: "110px",
+            sm: "110px",
+            md: "110px",
+            lg: "180px",
+          }}
           borderRadius={2}
-          p={2}
-          gap={2}
+          gap={1}
         >
-          <img src={BookImg} alt="Book" width={82} height={82} />
-          <Typography fontSize="16px" fontWeight="bold" textAlign="left">
+          <Box
+            width={{
+              xs: 50,
+              sm: 60,
+              md: 70,
+              lg: 82,
+            }}
+          >
+            <img src={BookImg} alt="Book" width={"100%"} height={"100%"} />
+          </Box>
+          <Typography
+            fontSize={{
+              xs: "12px",
+              sm: "14px",
+              md: "16px",
+            }}
+            fontWeight="bold"
+            textAlign="left"
+          >
             {item.title}
           </Typography>
           <Typography

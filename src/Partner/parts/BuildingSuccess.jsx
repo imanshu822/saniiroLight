@@ -16,19 +16,25 @@ const BuildingSuccess = () => {
       }}
     >
       <Box
+        margin={"0 auto"}
         sx={{
-          width: "909px",
-          height: "338px",
-          top: "167px",
-          left: "266px",
+          width: { xs: "95%", lg: "98%" },
         }}
       >
         <Box>
           <Typography
             sx={{
-              marginTop: "95px",
+              marginTop: {
+                xs: "30px",
+                sm: "35px",
+                md: "50px",
+                lg: "95px",
+              },
               fontFamily: "Work Sans",
-              fontSize: "30px",
+              fontSize: {
+                xs: "24px",
+                lg: "30px",
+              },
               fontWeight: 600,
               lineHeight: "30px",
               letterSpacing: "0em",
@@ -44,7 +50,12 @@ const BuildingSuccess = () => {
             sx={{
               marginTop: "15px",
               fontFamily: "Work Sans",
-              fontSize: "50px",
+              fontSize: {
+                xs: "24px",
+                sm: "30px",
+                md: "35px",
+                lg: "50px",
+              },
               fontWeight: 600,
               lineHeight: "53px",
               letterSpacing: "0em",
@@ -57,10 +68,17 @@ const BuildingSuccess = () => {
         </Box>
         <Box>
           <Typography
+            margin={"0 auto"}
+            width="95%"
             sx={{
               marginTop: "26px",
               fontFamily: "Work Sans",
-              fontSize: "18px",
+              fontSize: {
+                xs: "12px",
+                sm: "14px",
+                md: "16px",
+                lg: "18px",
+              },
               fontWeight: 400,
               lineHeight: "27px",
               letterSpacing: "0em",
@@ -76,7 +94,12 @@ const BuildingSuccess = () => {
           </Typography>
         </Box>
         <Stack
-          direction="row"
+          direction={{
+            xs: "column",
+            sm: "column",
+            md: "row",
+            lg: "row",
+          }}
           alignItems={"center"}
           justifyContent={"center"}
           sx={{
@@ -86,10 +109,24 @@ const BuildingSuccess = () => {
         >
           <Button
             sx={{
-              width: "214px",
-              height: "58px",
-              padding: "25px 20px",
-              fontSize: "18px",
+              width: {
+                xs: "130px",
+                md: "214px",
+              },
+              height: {
+                xs: "40px",
+                md: "58px",
+              },
+              padding: {
+                xs: "10px 10px",
+                md: "25px 20px",
+                lg: "25px 20px",
+              },
+              fontSize: {
+                xs: "12px",
+                md: "16px",
+                lg: "18px",
+              },
               backgroundColor: "#F15B25",
               color: "white",
               "&:hover": {
@@ -103,10 +140,24 @@ const BuildingSuccess = () => {
           </Button>
           <Button
             sx={{
-              width: "214px",
-              height: "58px",
-              padding: "25px 20px",
-              fontSize: "18px",
+              width: {
+                xs: "130px",
+                md: "214px",
+              },
+              height: {
+                xs: "40px",
+                md: "58px",
+              },
+              padding: {
+                xs: "10px 10px",
+                md: "25px 20px",
+                lg: "25px 20px",
+              },
+              fontSize: {
+                xs: "12px",
+                md: "16px",
+                lg: "18px",
+              },
               border: "1px solid #000000",
               color: "black",
               backgroundColor: "white",

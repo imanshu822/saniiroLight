@@ -1,12 +1,11 @@
 import React from "react";
+import OurGrowth from "./OurGrowth";
 
 const BlankSpace = () => {
   return (
-    <div
-      style={{
-        height: "280px",
-      }}
-    ></div>
+    <>
+      <OurGrowth />
+    </>
   );
 };
 

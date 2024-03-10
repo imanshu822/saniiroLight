@@ -1,5 +1,6 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
 
 import img1 from "./assets/image 156.png";
 import img2 from "./assets/image 161.png";
@@ -9,55 +10,42 @@ const Gallery = () => {
   return (
     <Box
       sx={{
-        width: "1230px",
+        width: "90%", // Adjusted width for responsiveness
         margin: "20px auto",
       }}
     >
-      <GridContainer>
-        <GridItem gridColumn="span 9" gridRow="span 6">
+      <Grid container spacing={2}>
+        <Grid item xs={12} sm={9}>
           <Image src={img1} alt="img1" />
-        </GridItem>
-        <GridItem gridColumn="span 3" gridRow="span 3">
+        </Grid>
+        <Grid item xs={6} sm={3} md={3}>
           <Image src={img2} alt="img2" />
-        </GridItem>
-        <GridItem gridColumn="span 3" gridRow="span 3">
+        </Grid>
+        <Grid item xs={6} sm={3} md={3}>
           <Image src={img2} alt="img2" />
-        </GridItem>
-        <GridItem gridColumn="span 3" gridRow="span 3">
+        </Grid>
+        <Grid item xs={6} sm={3} md={3}>
           <Image src={img3} alt="img3" />
-        </GridItem>
-        <GridItem gridColumn="span 3" gridRow="span 3">
-          <Image src={img2} alt="img2" />
-        </GridItem>
-        <GridItem gridColumn="span 6" gridRow="span 6">
-          <Image src={img2} alt="img2" />
-        </GridItem>
-        <GridItem gridColumn="span 3" gridRow="span 3">
+        </Grid>
+        <Grid item xs={6} sm={3} md={3}>
           <Image src={img3} alt="img3" />
-        </GridItem>
-        <GridItem gridColumn="span 3" gridRow="span 3">
+        </Grid>
+        <Grid item xs={6} sm={3} md={3}>
           <Image src={img2} alt="img2" />
-        </GridItem>
-        <GridItem gridColumn="span 8" />
-      </GridContainer>
+        </Grid>
+        <Grid item xs={12} sm={6} md={6}>
+          <Image src={img2} alt="img2" />
+        </Grid>
+        <Grid item xs={6} sm={3} md={3}>
+          <Image src={img3} alt="img3" />
+        </Grid>
+        <Grid item xs={6} sm={3} md={3}>
+          <Image src={img2} alt="img2" />
+        </Grid>
+      </Grid>
     </Box>
   );
 };
-
-// Reusable Grid Container component
-const GridContainer = ({ children }) => (
-  <Box
-    display="grid"
-    gridTemplateColumns="repeat(12, calc(1050px / 12))"
-    gridTemplateRows="repeat(12, calc(675px / 12))"
-    gap={2}
-  >
-    {children}
-  </Box>
-);
-
-// Reusable Grid Item component
-const GridItem = ({ children, ...props }) => <Box {...props}>{children}</Box>;
 
 // Reusable Image component
 const Image = ({ src, alt }) => (

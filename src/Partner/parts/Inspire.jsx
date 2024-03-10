@@ -2,55 +2,53 @@ import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
 import InspireImg from "./assets/Group80.png";
 
-const IMAGE_WIDTH = "508px";
 const IMAGE_HEIGHT = "156.37px";
 const TEXT_WIDTH = "508px";
 
 const Inspire = () => {
   return (
     <Stack
+      paddingTop="20px"
       sx={{
         margin: "auto",
-        width: "1240px",
+        width: "90%",
       }}
+      direction="column"
+      alignItems={{
+        xs: "center",
+        sm: "center",
+        lg: "flex-start",
+      }}
+      spacing={2}
     >
-      <Stack
-        direction="column"
-        alignItems="start"
-        spacing={2}
+      <Box
+        component="img"
+        src={InspireImg}
+        alt="Inspire"
         sx={{
-          marginTop: "100px",
-
-          marginBottom: "40px",
+          width: {
+            xs: "90%",
+            sm: "80%",
+            md: "40%",
+            lg: "30%",
+          },
+          marginBottom: "20px",
+        }}
+      />
+      <Typography
+        width={{
+          xs: "90%",
+          sm: "80%",
+          md: "70%",
+          lg: "50%",
         }}
       >
-        <Image
-          src={InspireImg}
-          alt="Inspire"
-          width={IMAGE_WIDTH}
-          height={IMAGE_HEIGHT}
-        />
-        <Typography sx={{ width: TEXT_WIDTH }}>
-          Inspire is our Partner conference designed to empower Saniiro Partners
-          and celebrate their journeys with us. It serves as a knowledge-sharing
-          platform for global partners, industry leaders, and Saniiro experts.
-        </Typography>
-      </Stack>
+        Inspire is our Partner conference designed to empower Saniiro Partners
+        and celebrate their journeys with us. It serves as a knowledge-sharing
+        platform for global partners, industry leaders, and Saniiro experts.
+      </Typography>
     </Stack>
   );
 };
-
-// Reusable Image component
-const Image = ({ src, alt, width, height }) => (
-  <Box
-    component="img"
-    src={src}
-    alt={alt}
-    sx={{
-      width: width,
-      height: height,
-    }}
-  />
-);
 
 export default Inspire;

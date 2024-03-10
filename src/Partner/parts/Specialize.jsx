@@ -5,16 +5,27 @@ const Specialize = () => {
   return (
     <Stack
       sx={{
-        height: "160px",
-        width: "909px",
-        marginTop: "90px",
-        margin: "auto",
+        width: "90%",
+        marginTop: {
+          xs: "30px",
+          lg: "90px",
+        },
+        margin: " 0 auto",
       }}
     >
       <Typography
         sx={{
+          textAlign: {
+            xs: "center",
+            lg: "left",
+          },
           fontFamily: "Work Sans",
-          fontSize: "40px",
+          fontSize: {
+            xs: "24px",
+            sm: "30px",
+            md: "35px",
+            lg: "40px",
+          },
           fontWeight: 600,
           lineHeight: "43px",
           letterSpacing: "0em",
@@ -26,11 +37,23 @@ const Specialize = () => {
       <Typography
         sx={{
           fontFamily: "Work Sans",
-          fontSize: "18px",
+          fontSize: {
+            xs: "12px",
+            sm: "14px",
+            md: "16px",
+            lg: "18px",
+          },
+          width: {
+            xs: "95%",
+            lg: "900px",
+          },
           fontWeight: 400,
           lineHeight: "27px",
           letterSpacing: "0em",
-          textAlign: "left",
+          textAlign: {
+            xs: "center",
+            lg: "left",
+          },
         }}
       >
         Based on your specialization, you can build Zoho capabilities for a

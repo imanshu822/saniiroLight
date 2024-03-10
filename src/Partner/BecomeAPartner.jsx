@@ -12,22 +12,25 @@ import ContactFaq from "../Home/parts/ContactFaq";
 import Readytosign from "../Contact/parts/Readytosign";
 import Inspire from "./parts/Inspire";
 import Gallery from "./parts/Gallery";
+import { Stack } from "@mui/material";
 const BecomeAPartner = () => {
   return (
     <>
-      <Nav />;
-      <BuildingSuccess />
-      <Tagline />
-      <Billing bgColor={true} />
-      <Specialize />
-      <ApplicationSection />
-      <BlankSpace />
-      <PartnerPrivileges />
-      <Inspire />
-      <Gallery />
-      <ContactFaq />
-      <Readytosign />
-      <Footer />
+      <Stack>
+        <Nav />
+        <BuildingSuccess />
+        <Tagline />
+        <Billing bgColor={true} />
+        <Specialize />
+        <ApplicationSection />
+        <BlankSpace />
+        <PartnerPrivileges />
+        <Inspire />
+        <Gallery />
+        <ContactFaq />
+        <Readytosign />
+        <Footer />
+      </Stack>
     </>
   );
 };
