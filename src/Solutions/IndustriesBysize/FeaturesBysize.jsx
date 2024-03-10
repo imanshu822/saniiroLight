@@ -555,6 +555,7 @@ function FeaturesBysize() {
                 marginBottom={"15px"}
                 border={"1px solid lightgrey"}
                 borderRadius={"10px"}
+                margin={"5px"}
                 padding={{
                   xs: "10px 5px",
                   sm: "10px 5px",
