@@ -1,4 +1,4 @@
-import { Stack } from '@mui/material'
+import { Box, Stack } from '@mui/material'
 import React from 'react'
 import ContactUs from './parts/ContactUs'
 import GrennSection from './parts/GreenSection'
@@ -9,16 +9,16 @@ import Readytosign from './parts/Readytosign'
 
 const Contact = () => {
   return (
-    <>
-        <ContactUs />
+    <Box fontFamily={"Work Sans"} maxWidth={"1536px"} margin={"0 auto"} gap={4}>
+      <ContactUs />
       <Stack bgcolor={"#F1F1F1"}>
         <GrennSection />
         <Bluescreen />
       </Stack>
       <Offices />
-      <Readytosign/>
-      <Footer/>
-    </>
+      <Readytosign />
+      <Footer />
+    </Box>
   );
 }
 

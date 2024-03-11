@@ -7,12 +7,16 @@ const CaseStudtyCard1 = () => {
   return (
     <>
       <Stack
+        margin={"0px auto"}
         backgroundColor={"white"}
         zIndex={1}
         border={"1px solid  #F15B25"}
         borderRadius={"10px"}
         height={"525px"}
-        width={"340px"}
+        width={{
+          xs: "95%",
+          md: "340px",
+        }}
       >
         <Stack padding={"45px 20px"} gap={2}>
           <Box
@@ -137,14 +141,24 @@ const CaseStudtyCard1 = () => {
           >
             Features that helped us
           </Typography>
-          <Stack direction={"rows"} flexWrap={"wrap"} gap={1}>
+          <Stack
+            direction={"rows"}
+            flexWrap={"wrap"}
+            gap={1}
+            justifyContent={{
+              xs: "flex-start",
+              sm: "center",
+              lg: "flex-start",
+            }}
+          >
             <Stack
               sx={{
                 width: "110px",
                 height: "23px",
-                top: "1014px",
-                left: "1023px",
-                padding: "2.5px 4px",
+                padding: {
+                  xs: "2.5px 0px",
+                  md: "2.5px 4px",
+                },
                 borderRadius: "4px",
                 backgroundColor: "#FFDEC2",
                 justifyContent: "center",
@@ -154,7 +168,11 @@ const CaseStudtyCard1 = () => {
               <Typography
                 sx={{
                   fontFamily: "Work Sans",
-                  fontSize: "14px",
+                  fontSize: {
+                    xs: "12px",
+                    md: "14px",
+                  },
+
                   fontWeight: 500,
                   lineHeight: "15px",
                   letterSpacing: "-0.02em",
@@ -169,9 +187,10 @@ const CaseStudtyCard1 = () => {
               sx={{
                 width: "110px",
                 height: "23px",
-                top: "1014px",
-                left: "1023px",
-                padding: "2.5px 4px",
+                padding: {
+                  xs: "2.5px 0px",
+                  md: "2.5px 4px",
+                },
                 borderRadius: "4px",
                 backgroundColor: "#FFDEC2",
                 justifyContent: "center",
@@ -181,7 +200,11 @@ const CaseStudtyCard1 = () => {
               <Typography
                 sx={{
                   fontFamily: "Work Sans",
-                  fontSize: "14px",
+                  fontSize: {
+                    xs: "12px",
+                    md: "14px",
+                  },
+
                   fontWeight: 500,
                   lineHeight: "15px",
                   letterSpacing: "-0.02em",
@@ -196,9 +219,10 @@ const CaseStudtyCard1 = () => {
               sx={{
                 width: "110px",
                 height: "23px",
-                top: "1014px",
-                left: "1023px",
-                padding: "2.5px 4px",
+                padding: {
+                  xs: "2.5px 0px",
+                  md: "2.5px 4px",
+                },
                 borderRadius: "4px",
                 backgroundColor: "#FFDEC2",
                 justifyContent: "center",
@@ -208,7 +232,11 @@ const CaseStudtyCard1 = () => {
               <Typography
                 sx={{
                   fontFamily: "Work Sans",
-                  fontSize: "14px",
+                  fontSize: {
+                    xs: "12px",
+                    md: "14px",
+                  },
+
                   fontWeight: 500,
                   lineHeight: "15px",
                   letterSpacing: "-0.02em",
@@ -223,9 +251,10 @@ const CaseStudtyCard1 = () => {
               sx={{
                 width: "110px",
                 height: "23px",
-                top: "1014px",
-                left: "1023px",
-                padding: "2.5px 4px",
+                padding: {
+                  xs: "2.5px 0px",
+                  md: "2.5px 4px",
+                },
                 borderRadius: "4px",
                 backgroundColor: "#FFDEC2",
                 justifyContent: "center",
@@ -235,7 +264,11 @@ const CaseStudtyCard1 = () => {
               <Typography
                 sx={{
                   fontFamily: "Work Sans",
-                  fontSize: "14px",
+                  fontSize: {
+                    xs: "12px",
+                    md: "14px",
+                  },
+
                   fontWeight: 500,
                   lineHeight: "15px",
                   letterSpacing: "-0.02em",
@@ -250,9 +283,10 @@ const CaseStudtyCard1 = () => {
               sx={{
                 width: "110px",
                 height: "23px",
-                top: "1014px",
-                left: "1023px",
-                padding: "2.5px 4px",
+                padding: {
+                  xs: "2.5px 0px",
+                  md: "2.5px 4px",
+                },
                 borderRadius: "4px",
                 backgroundColor: "#FFDEC2",
                 justifyContent: "center",
@@ -262,7 +296,11 @@ const CaseStudtyCard1 = () => {
               <Typography
                 sx={{
                   fontFamily: "Work Sans",
-                  fontSize: "14px",
+                  fontSize: {
+                    xs: "12px",
+                    md: "14px",
+                  },
+
                   fontWeight: 500,
                   lineHeight: "15px",
                   letterSpacing: "-0.02em",
@@ -277,9 +315,10 @@ const CaseStudtyCard1 = () => {
               sx={{
                 width: "110px",
                 height: "23px",
-                top: "1014px",
-                left: "1023px",
-                padding: "2.5px 4px",
+                padding: {
+                  xs: "2.5px 0px",
+                  md: "2.5px 4px",
+                },
                 borderRadius: "4px",
                 backgroundColor: "#FFDEC2",
                 justifyContent: "center",
@@ -289,7 +328,11 @@ const CaseStudtyCard1 = () => {
               <Typography
                 sx={{
                   fontFamily: "Work Sans",
-                  fontSize: "14px",
+                  fontSize: {
+                    xs: "12px",
+                    md: "14px",
+                  },
+
                   fontWeight: 500,
                   lineHeight: "15px",
                   letterSpacing: "-0.02em",
@@ -306,11 +349,17 @@ const CaseStudtyCard1 = () => {
             margin={"20px auto 0px"}
             direction={"row"}
             sx={{
-              width: "266px",
+              width: {
+                xs: "100%",
+                md: "266px",
+              },
               height: "46px",
               padding: "14px, 20px, 14px, 20px",
               borderRadius: "4px",
-              gap: "22px",
+              gap: {
+                xs: "10px",
+                md: "22px",
+              },
               backgroundColor: "#052973",
               justifyContent: "center",
               alignItems: "center",
@@ -325,7 +374,10 @@ const CaseStudtyCard1 = () => {
             <Typography
               sx={{
                 fontFamily: "Work Sans",
-                fontSize: "18px",
+                fontSize: {
+                  xs: "14px",
+                  md: "18px",
+                },
                 fontWeight: 600,
                 lineHeight: "18px",
                 letterSpacing: "0em",

@@ -7,12 +7,12 @@ import Signupfree from "./Signupfree";
 
 const SolutionByusecases = () => {
   return (
-    <Stack>
+    <>
       <Industries />
       <Industry2 />
       <Signupfree />
       <Footer />
-    </Stack>
+    </>
   );
 };
 

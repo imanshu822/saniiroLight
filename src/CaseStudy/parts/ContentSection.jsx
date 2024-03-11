@@ -47,12 +47,26 @@ const UserContents = [
 const ContentSection = () => {
   return (
     <>
-      <Stack backgroundColor={"white"} paddingBottom={"100px"}>
-        <Stack position={"relative"} width={"1200px"} margin={"auto"}>
+      {/* desktop view  */}
+      <Stack
+        display={{
+          xs: "none",
+          xl: "flex",
+        }}
+        backgroundColor={"white"}
+        paddingBottom={"100px"}
+      >
+        <Stack
+          position={"relative"}
+          width={{
+            lg: "95%",
+            xl: "90%",
+          }}
+          margin={"auto"}
+        >
           <Stack width={"790px"} direction={"column"} gap={2}>
             <KeyResults />
             <Stack gap={3}>
-              {/* Corrected map function */}
               {UserContents.map((content) => (
                 <UserContent key={content.id} content={content} />
               ))}
@@ -80,6 +94,42 @@ const ContentSection = () => {
             />
             <CaseStudyCard1 />
             <CaseStudyCard2 />
+          </Stack>
+        </Stack>
+      </Stack>
+
+      {/* mobile view  */}
+
+      <Stack
+        display={{
+          xs: "flex",
+          xl: "none",
+        }}
+        backgroundColor={"white"}
+      >
+        <Stack width={"90%"} margin={"auto"} gap={3}>
+          <Stack direction={"column"} gap={2}>
+            <KeyResults />
+            <Stack gap={3}>
+              {/* Corrected map function */}
+              {UserContents.map((content) => (
+                <UserContent key={content.id} content={content} />
+              ))}
+            </Stack>
+          </Stack>
+
+          <Stack gap={3}>
+            <Stack
+              alignSelf={"center"}
+              gap={3}
+              direction={{
+                xs: "column",
+                md: "row",
+              }}
+            >
+              <CaseStudyCard1 />
+              <CaseStudyCard2 />
+            </Stack>
           </Stack>
         </Stack>
       </Stack>

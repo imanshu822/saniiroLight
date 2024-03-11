@@ -11,12 +11,20 @@ const CaseStudtyCard1 = () => {
         border={"1px solid  #F15B25"}
         borderRadius={"10px"}
         height={"390px"}
-        width={"340px"}
+        width={{
+          xs: "95%",
+          md: "330px",
+        }}
+        margin={"0 auto"}
       >
         <Stack padding={"45px 20px"} gap={2}>
           <Box
+            m={"0 auto"}
             component="img"
-            width={"300px"}
+            width={{
+              xs: "200px",
+              md: "300px",
+            }}
             height={"136px"}
             alt="FedXImgs"
             src={interviewImg}
@@ -54,7 +62,10 @@ const CaseStudtyCard1 = () => {
                 margin={"30px auto 0px"}
                 direction={"row"}
                 sx={{
-                  width: "250px",
+                  width: {
+                    xs: "100%",
+                    md: "250px",
+                  },
                   height: "46px",
                   padding: "20px, 20px, 14px, 20px",
                   borderRadius: "4px",
@@ -73,7 +84,10 @@ const CaseStudtyCard1 = () => {
                 <Typography
                   sx={{
                     fontFamily: "Work Sans",
-                    fontSize: "16px",
+                    fontSize: {
+                      xs: "12px",
+                      md: "16px",
+                    },
                     fontWeight: 600,
                     lineHeight: "18px",
                     letterSpacing: "0em",

@@ -9,12 +9,20 @@ import fedXImg from "../../assets/image 167.png";
 const FeedbackCard = ({ video, name, position, feedback }) => {
   return (
     <Stack
-      width={"350px"}
+      width={{
+        xs: "100%",
+        md: "320px",
+      }}
       borderRadius={"6.98px"}
       border={"1px solid gray"}
       backgroundColor={"white"}
     >
-      <Stack padding={"20px"}>
+      <Stack
+        padding={{
+          xs: "10px",
+          md: "20px",
+        }}
+      >
         <Stack
           direction={"column"}
           justifyContent={"space-between"}
@@ -35,7 +43,10 @@ const FeedbackCard = ({ video, name, position, feedback }) => {
           <Typography
             sx={{
               fontFamily: "Work Sans",
-              fontSize: "20px",
+              fontSize: {
+                xs: "16px",
+                md: "20px",
+              },
               fontWeight: 400,
               lineHeight: "25px",
               letterSpacing: "-0.02em",

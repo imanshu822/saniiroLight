@@ -21,10 +21,17 @@ const KeyResults = () => {
           </Typography>
         </Stack>
         <Stack
+          direction={{
+            xs: "column",
+            md: "row",
+          }}
+          gap={{
+            xs: 3,
+            md: 0,
+          }}
           marginTop={"30px"}
           marginRight={"30px"}
           marginLeft={"30px"}
-          direction={"row"}
           justifyContent={"space-between"}
         >
           <Stack paddingLeft={"10px"} borderLeft={"3px solid #F15B25"}>
@@ -117,7 +124,6 @@ const KeyResults = () => {
                 lineHeight: "13px",
                 letterSpacing: "0em",
                 textAlign: "left",
-                color: "#DF7E00",
               }}
             >
               Adoption
@@ -130,6 +136,7 @@ const KeyResults = () => {
                 lineHeight: "39px",
                 letterSpacing: "0em",
                 textAlign: "left",
+                color: "#DF7E00",
               }}
             >
               100%

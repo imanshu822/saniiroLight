@@ -7,23 +7,54 @@ const TestimonialsBanner = () => {
     <Stack width={"100%"}>
       <Stack
         margin={"0 auto"}
-        width={"1420px"}
-        height={"729px"}
+        width={{
+          xs: "100%",
+          sm: "100%",
+          md: "100%",
+          lg: "100%",
+          xl: "100%",
+        }}
+        height={{
+          xs: "600px",
+          md: "729px",
+        }}
         sx={{
           backgroundImage: `url(${bannerImg})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
+          // backgroundPosition: "center center",
         }}
       >
         <Stack maxWidth={"1420px"} textAlign={"center"}>
           <Typography
-            width={"60%"}
-            margin={"70px auto 10px"}
+            width={{
+              xs: "90%",
+              sm: "80%",
+              md: "70%",
+              lg: "60%",
+              xl: "60%",
+            }}
+            margin={{
+              xs: "30px auto 0px",
+              sm: "35px auto 0px",
+              md: "50px auto 0px",
+              lg: "70px auto 10px",
+            }}
             sx={{
               fontFamily: "Work Sans",
               fontWeight: 700,
-              fontSize: "40px",
-              lineHeight: "49px",
+              fontSize: {
+                xs: "27px",
+                sm: "30px",
+                md: "35px",
+                lg: "40px",
+              },
+              lineHeight: {
+                xs: "35px",
+                md: "40px",
+                lg: "50px",
+              },
+
               textTransform: "uppercase",
               color: "#34A853",
             }}
@@ -31,7 +62,13 @@ const TestimonialsBanner = () => {
             Customer Testimonials
           </Typography>
           <Typography
-            width={"60%"}
+            width={{
+              xs: "90%",
+              sm: "80%",
+              md: "70%",
+              lg: "60%",
+              xl: "60%",
+            }}
             margin={"0px auto 10px"}
             sx={{
               fontFamily: "Work Sans",
@@ -44,7 +81,13 @@ const TestimonialsBanner = () => {
             Saniiro CRM is trusted by over 250,000 businesses worldwide.
           </Typography>
           <Typography
-            width={"60%"}
+            width={{
+              xs: "90%",
+              sm: "80%",
+              md: "70%",
+              lg: "60%",
+              xl: "60%",
+            }}
             margin={"0px auto 10px"}
             sx={{
               fontFamily: "Work Sans",

@@ -513,7 +513,7 @@ const NavLight = () => {
       <Stack
         zIndex={25}
         alignItems={"end"}
-        width={"98%"}
+        width={"100%"}
         sx={{
           display: {
             xs: "flex",

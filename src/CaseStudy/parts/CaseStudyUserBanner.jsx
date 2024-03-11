@@ -8,17 +8,32 @@ const CaseStudyUserBanner = () => {
   return (
     <Stack bgcolor={"#052973"} className="textured-background">
       <NavLight />
-      <Stack gap={4} pb={14}>
+      <Stack
+        gap={4}
+        pb={{
+          xs: 7,
+          md: 14,
+        }}
+      >
         <Stack
-          margin={"90px auto 0px"}
-          width={"1024px"}
+          margin={{
+            xs: "35px auto 0px",
+            md: "90px auto 0px",
+          }}
+          width={{
+            xs: "95%",
+            lg: "1024px",
+          }}
           gap={2}
           alignItems={"center"}
           justifyContent={"center"}
         >
           <Typography
             textTransform={"uppercase"}
-            fontSize={"40px"}
+            fontSize={{
+              xs: "30px",
+              md: "40px",
+            }}
             letterSpacing={1}
             fontWeight={"bold"}
             color={"white"}
@@ -31,7 +46,10 @@ const CaseStudyUserBanner = () => {
           <Typography
             sx={{
               fontFamily: "Work Sans",
-              fontSize: "22px",
+              fontSize: {
+                xs: "16px",
+                md: "22px",
+              },
               fontWeight: 500,
               lineHeight: "32px",
               letterSpacing: "0em",

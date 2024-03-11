@@ -5,11 +5,7 @@ import Button from "../../utils/Button";
 import Nav from "../../Navbar/Nav";
 import "./contact.css";
 import PhoneNumber from "./PhoneNumber";
-import icon1Contact from "../../assets/icon1contact.svg";
-import icon2Contact from "../../assets/icon2contact.svg";
-import icon3Contact from "../../assets/icon3contact.svg";
-import icon4Contact from "../../assets/icon4contact.svg";
-import Boxes from "../../assets/Boxes.svg";
+
 import { Link } from "react-router-dom";
 import NavLight from "../../Navbar/NavLight";
 const ContactUs = () => {
@@ -25,30 +21,85 @@ const ContactUs = () => {
   };
   return (
     <Stack
-      height={"auto"}
+      height={{xl:"930px",xs:"auto"}}
       position={"relative"}
       bgcolor={"#052973"}
       className="textured-background"
-      
     >
       <NavLight />
-      <Stack direction={"row"} zIndex={11}>
-        <Stack width={"50%"} p={"100px 0px 0 100px"} gap={2}>
+      <Stack
+        zIndex={11}
+        sx={{
+          flexDirection: {
+            xs: "column",
+            lg: "row",
+          },
+          // width: "100%",
+          margin: {
+            xs: "0px",
+            sm: "20px",
+          },
+        }}
+      >
+        <Stack
+        gap={"10px"}
+          sx={{
+            width: {
+              xs: "100%",
+              lg: "40%",
+              xl: "54%",
+              xxl: "50%",
+            },
+            margin: {
+              lg: "40px auto",
+              xl: "84px 37px",
+            },
+            padding: {
+              xs: "10px 0",
+            },
+          }}
+        >
           <Typography
             textTransform={"uppercase"}
-            fontSize={"90px"}
-            letterSpacing={1}
+            fontFamily={"monospace"}
+            sx={{
+              wordSpacing: { xl: "-27px" },
+              fontSize: {
+                xs: "39px",
+                sm:"39px",
+                md: "68px",
+                lg: "63px",
+                xl: "97px",
+              },
+              textAlign: {
+                xs: "center",
+                lg: "left",
+              },
+            }}
             fontWeight={"bold"}
             color={"transparent"}
-            lineHeight={1}
+            lineHeight={0.9}
+            letterSpacing={"0.1em"}
             className="text-stroke"
           >
             Looking For
           </Typography>
           <Typography
-            textTransform={"uppercase"}
-            fontSize={"80px"}
             color={"white"}
+            textTransform={"uppercase"}
+            sx={{
+              fontSize: {
+                xs: "38px",
+                sm:"37px",
+                md: "68px",
+                lg: "63px",
+                xl: "87px",
+              },
+              textAlign: {
+                xs: "center",
+                lg: "left",
+              },
+            }}
             fontWeight={900}
             lineHeight={0.9}
             letterSpacing={"0.05em"}
@@ -56,16 +107,103 @@ const ContactUs = () => {
             something in particular?
           </Typography>
 
-          <Typography fontSize={"26px"} color={"white"}>
+          <Typography
+            fontFamily={"Work Sans"}
+            // color={"white"}
+            color={"white"}
+            sx={{
+              width: {
+                xs: "90%",
+                sm: "80%",
+                lg: "90%",
+              },
+              margin: {
+                xs: "0px auto 0px",
+                lg: "5px 5px",
+              },
+
+              fontSize: {
+                xs: "14px",
+                lg: "18px",
+              },
+              textAlign: {
+                xs: "center",
+                lg: "left",
+              },
+            }}
+          >
             We're here to help.
           </Typography>
         </Stack>
-        <Stack alignItems={"Center"} width={"50%"} gap={2} pt={4}>
-          <Typography color={"white"} fontWeight={"bold"} fontSize={"22px"}>
+        <Stack
+          alignItems={"Center"}
+          gap={2}
+          sx={{
+            width: {
+              xs: "100%",
+              lg: "50%",
+              xl: "50%",
+            },
+            padding: {
+              xs: "20px 0px",
+              lg: "20px 0px",
+              xl: "40px 0px",
+            },
+          }}
+        >
+          <Typography
+            sx={{
+              fontSize: {
+                xs: "18px",
+                sm: "22px",
+                md: "24px",
+                xl: "32px",
+              },
+              textAlign: {
+                xs: "center",
+              },
+            }}
+            color={"white"}
+            fontWeight={"bold"}
+            fontSize={"22px"}
+            textAlign={"center"}
+            fontFamily={"Work Sans"}
+          >
             Get started with your free trial
           </Typography>
-          <Stack gap={1.5}>
-            <Stack direction={"row"} gap={1}>
+          <Stack
+            alignItems={"center"}
+            gap={2}
+            margin={"0 auto"}
+            sx={{
+              width: {
+                xs: "80%",
+                md: "70%",
+                lg: "100%",
+                xl: "100%",
+              },
+            }}
+          >
+            <Stack
+              direction={"row"}
+              gap={1}
+              sx={{
+                width: {
+                  xs: "220px",
+                  sm: "300px",
+                  md: "480px",
+                  lg: "385px",
+                  xl: "480px",
+                },
+                height: {
+                  xs: "45px",
+                  sm: "55px",
+                  md: "67px",
+                  lg: "57px",
+                  xl: "67px",
+                },
+              }}
+            >
               <input
                 type="name"
                 className="input-city"
@@ -73,166 +211,179 @@ const ContactUs = () => {
               />
               <input type="email" className="input-city" placeholder="Email" />
             </Stack>
-            <Stack direction={"row"} gap={1}>
+            <Stack
+              direction={"row"}
+              gap={1}
+              sx={{
+                width: {
+                  xs: "220px",
+                  sm: "300px",
+                  md: "480px",
+                  lg: "385px",
+                  xl: "480px",
+                },
+                height: {
+                  xs: "45px",
+                  sm: "55px",
+                  md: "67px",
+                  lg: "57px",
+                  xl: "67px",
+                },
+              }}
+            >
               <input type="name" className="input-city" placeholder="Company" />
               <input type="name" className="input-city" placeholder="Subject" />
             </Stack>
-
-            <PhoneNumber />
-            <textarea
-              name="Question"
-              type="text"
-              placeholder="Question"
-              className="input-question"
-              rows="6"
-              cols="40"
-            />
-            <Typography fontSize={"13px"} color={"white"}>
+            <Stack
+              sx={{
+                width: {
+                  xs: "220px",
+                  sm: "300px",
+                  md: "480px",
+                  lg: "385px",
+                  xl: "480px",
+                },
+                height: {
+                  xs: "45px",
+                  sm: "55px",
+                  md: "67px",
+                  lg: "57px",
+                  xl: "67px",
+                },
+              }}
+            >
+              <PhoneNumber />
+            </Stack>
+            <Stack
+              sx={{
+                width: {
+                  xs: "220px",
+                  sm: "300px",
+                  md: "480px",
+                  lg: "385px",
+                  xl: "480px",
+                },
+              }}
+            >
+              <textarea
+                name="Question"
+                type="text"
+                placeholder="Question"
+                className="input-question"
+                rows="6"
+                cols="40"
+              />
+            </Stack>
+            <Typography
+              // color={"white"}
+              color={"white"}
+              fontFamily={"Work Sans"}
+              fontSize={"13px"}
+              sx={{
+                textAlign: {
+                  xs: "center",
+                  lg: "left",
+                },
+              }}
+            >
               It looks like you‘re in INDIA based on your IP.
             </Typography>
-            <Stack gap={2}>
-              <Stack direction={"row"} gap={1}>
-                <input
-                  type="checkbox"
-                  checked={isChecked}
-                  onChange={handleCheckboxChange}
-                />
-                <Typography fontSize={"15px"} color={"white"}>
+
+            <Stack
+              width={"100%"}
+              gap={2}
+              sx={{
+                alignItems: {
+                  xs: "center",
+                  lg: "left",
+                },
+              }}
+            >
+              <Stack
+                direction={"row"}
+                gap={1}
+                sx={{
+                  textAlign: {
+                    xs: "left",
+                    lg: "left",
+                  },
+                }}
+              >
+                <Stack>
+                  <input
+                    type="checkbox"
+                    checked={isChecked}
+                    onChange={handleCheckboxChange}
+                  />
+                </Stack>
+                <Typography
+                  fontFamily={"Work Sans"}
+                  fontSize={"13px"}
+                  // color={"white"}
+                  color={"white"}
+                >
                   I agree to the Terms of Service and Privacy Policy.
                 </Typography>
               </Stack>
               <Button
                 type="button"
+                fontFamily={"Work Sans"}
                 sx={{
+                  width: {
+                    xs: "220px",
+                    sm: "300px",
+                    md: "480px",
+                    lg: "385px",
+                    xl: "480px",
+                  },
+                  height: {
+                    xs: "45px",
+                    sm: "55px",
+                    md: "67px",
+                    lg: "57px",
+                    xl: "67px",
+                  },
                   color: "white",
-                  width: "508px",
-                  height: "67px",
-                  fontSize: "22px",
-                  bgcolor: "#D45630",
+                  fontSize: {
+                    xs: "16px",
+                    sm: "19px",
+                    md: "22px",
+                  },
+                  // border: "1px solid #F15B25",
+                  bgcolor: "#F15B25",
+                  // bgcolor: "#F15B25",
                   fontWeight: "bold",
                   "&:hover": {
-                    backgroundColor: "#052973",
-                    color: "white",
+                    backgroundColor: "transparent",
+                    // border: "1px solid #F15B25",
+                    border: "1px solid #052973",
+                    // color: "white",
+                    color: "black",
                   },
                 }}
                 onClick={handleSubmit}
               >
                 Get Started
               </Button>
+              {/* <Stack
+                direction={"row"}
+                alignSelf={{ xs: "center", md: "end" }}
+                gap={1}
+              >
+                <Typography
+                  display={"flex"}
+                  fontFamily={"Work Sans"}
+                  // color={"white"}
+                  color={"white"}
+                >
+                  or sign in using
+                </Typography>
+              </Stack> */}
             </Stack>
           </Stack>
         </Stack>
       </Stack>
-      <Stack alignItems={"center"} pt={4}>
-        <Stack
-          bgcolor={"#248F41"}
-          width={"85%"}
-          borderRadius={1}
-          p={"20px 24px"}
-          direction={"row"}
-          gap={2}
-          zIndex={1}
-        >
-          <Stack width={"25%"} bgcolor={"white"} borderRadius={1}>
-            <Stack p={"20px 25px"} gap={2}>
-              <Button
-                sx={{
-                  borderRadius: 1,
-                  fontWeight: "bold",
-                  bgcolor: "#248F41",
-                  color: "white",
-                  width: "100px",
-                  height: "25px",
-                  fontSize: "12px",
-                }}
-              >
-                I'M NEW HERE
-              </Button>
-              <Stack>
-                <img
-                  src={icon1Contact}
-                  alt=""
-                  style={{ width: "50px", height: "50px" }}
-                />
-              </Stack>
-              <Typography>
-                Looking for a demo, or have questions about our products and
-                pricing?
-              </Typography>
-              <Link to={"#"}>sales@zohocorp.com</Link>
-            </Stack>
-          </Stack>
-          <Stack width={"75%"} bgcolor={"white"} borderRadius={1}>
-            <Stack p={"20px 25px"} gap={2}>
-              <Button
-                sx={{
-                  borderRadius: 1,
-                  fontWeight: "bold",
-                  bgcolor: "#052864",
-                  color: "white",
-                  width: "150px",
-                  height: "25px",
-                  fontSize: "12px",
-                }}
-              >
-                EXISTING CUSTOMER
-              </Button>
-              <Stack direction={"row"} gap={5}>
-                <Stack width={"30%"} gap={2} borderRight={"1px solid #248F41"}>
-                  <Stack>
-                    <img
-                      src={icon2Contact}
-                      alt=""
-                      style={{ width: "50px", height: "50px" }}
-                    />
-                  </Stack>
-                  <Typography>
-                    Looking for a demo, or have questions about our products and
-                    pricing?
-                  </Typography>
-                  <Link to={"#"}>sales@zohocorp.com</Link>
-                </Stack>
-                <Stack width={"30%"} gap={2} borderRight={"1px solid #248F41"}>
-                  <Stack>
-                    <img
-                      src={icon3Contact}
-                      alt=""
-                      style={{ width: "50px", height: "50px" }}
-                    />
-                  </Stack>
-                  <Typography>
-                    Looking for a demo, or have questions about our products and
-                    pricing?
-                  </Typography>
-                  <Link to={"#"}>sales@zohocorp.com</Link>
-                </Stack>
-                <Stack width={"30%"} gap={2}>
-                  <Stack>
-                    <img
-                      src={icon4Contact}
-                      alt=""
-                      style={{ width: "50px", height: "50px" }}
-                    />
-                  </Stack>
-                  <Typography>
-                    Looking for a demo, or have questions about our products and
-                    pricing?
-                  </Typography>
-                  <Link to={"#"}>sales@zohocorp.com</Link>
-                </Stack>
-              </Stack>
-            </Stack>
-          </Stack>
-        </Stack>
-        <Stack
-          alignItems={"end"}
-          width={"98%"}
-          position={"absolute"}
-          bottom={"-11%"}
-        >
-          <img src={Boxes} alt="" />
-        </Stack>
-      </Stack>
+     
     </Stack>
   );
 };

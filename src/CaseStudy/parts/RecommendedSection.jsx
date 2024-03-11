@@ -14,7 +14,7 @@ const RecommendedSection = () => {
 
   return (
     <>
-      <Stack width={"1200px"} margin={"40px auto 70px"}>
+      <Stack width={"90%"} margin={"40px auto 70px"}>
         <Stack>
           <Typography
             sx={{
@@ -30,7 +30,16 @@ const RecommendedSection = () => {
             Recommended case studies
           </Typography>
         </Stack>
-        <Stack direction={"row"} gap={3}>
+        <Stack
+          direction={{
+            xs: "column",
+            md: "row",
+          }}
+          gap={3}
+          flexWrap={"wrap"}
+          justifyContent={"center"}
+          alignItems={"center"}
+        >
           {column2.map((review) => (
             <Link
               style={{ textDecoration: "none", color: "black" }}
