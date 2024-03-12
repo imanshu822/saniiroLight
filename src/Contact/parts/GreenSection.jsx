@@ -179,8 +179,8 @@ const GrennSection = () => {
             </Typography>
           </Stack>
         </Stack>
-        <Stack width={"90%"} direction={{xl:"row",xs:"column-reverse"}}>
-          <Stack p={"20px 25px"} gap={3} width={"40%"}>
+        <Stack width={{xl:"90%",xs:"100%"}} direction={{xl:"row",xs:"column-reverse"}}>
+          <Stack p={"20px 25px"} gap={3} width={{xl:"40%",xs:"100%"}}>
             <Button
               sx={{
                 borderRadius: 1,
@@ -194,7 +194,7 @@ const GrennSection = () => {
             >
               I'M NEW HERE
             </Button>
-            <Typography fontSize={"40px"} letterSpacing={1}>
+            <Typography fontSize={{xl:"40px",xs:"24px"}} letterSpacing={1}>
               Interested in a product? Talk to our sales team
             </Typography>
             <Typography>
@@ -202,12 +202,12 @@ const GrennSection = () => {
               we'd love to connect and help get you started.
             </Typography>
           </Stack>
-          <Stack width={"60%"} alignItems={"center"} justifyContent={"center"}>
+          <Stack width={{xl:"60%",xs:"none"}} alignItems={"center"} justifyContent={"center"}>
             <Stack
-              width={"80%"}
+              width={{xl:"80%",xs:"90%"}}
               bgcolor={"#FFFFFF"}
               gap={3}
-              p={"50px 70px"}
+              p={{xl:"50px 70px",xs:"30px 19px"}}
               borderRadius={1}
             >
               <Stack direction={"row"} gap={1} justifyContent={"center"}>

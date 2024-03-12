@@ -15,12 +15,7 @@ const SolutionBysize = () => {
   return (
     <>
       {/* for desktop view  */}
-      <Stack
-        display={{
-          xs: "none",
-          lg: "flex",
-        }}
-      >
+      <Stack>
         <Stack position={"relative"} gap={5}>
           <Stack>
             <Nav />
@@ -30,7 +25,14 @@ const SolutionBysize = () => {
             <Line />
             <SliderIndustry />
           </Stack>
-          <Stack alignItems={"center"} p={"100px 0"}>
+          <Stack
+            alignItems={"center"}
+            p={"100px 0"}
+            display={{
+              xs: "none",
+              lg: "flex",
+            }}
+          >
             <img src={Boxes} alt="" style={{ width: "100px" }} />
           </Stack>
           <Industries2 />
@@ -43,7 +45,7 @@ const SolutionBysize = () => {
         </Stack>
       </Stack>
       {/* for mobile view  */}
-      <Stack
+      {/* <Stack
         display={{
           xs: "flex",
           lg: "none",
@@ -60,7 +62,7 @@ const SolutionBysize = () => {
           <ContactFaq />
           <Footer />
         </Stack>
-      </Stack>
+      </Stack> */}
     </>
   );
 };

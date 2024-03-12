@@ -23,19 +23,19 @@ const Industries2 = () => {
     <>
       {/* for desktop view  */}
       <Stack
-        display={{
-          xs: "none",
-          lg: "flex",
-        }}
+        // display={{
+        //   xs: "none",
+        //   lg: "flex",
+        // }}
         bgcolor={"#F8F8F8"}
         width={"100%"}
         height={"fit-content"}
         alignItems={"center"}
       >
         <Stack
-          position={"absolute"}
+          position={{ xl: "absolute", xs: "none" }}
           bgcolor={"#052973"}
-          width={"85%"}
+          width={{ xl: "85%", xs: "95%" }}
           top={"19.7%"}
           height={"auto"}
           p={"20px 0 40px 0 "}
@@ -45,28 +45,61 @@ const Industries2 = () => {
         >
           <Stack>
             <Typography
-              fontSize={"40px"}
+              fontSize={{
+                xs: "16px",
+                sm: "19px",
+                md: "26px",
+                xl: "40px",
+              }}
               fontWeight={"bold"}
               color={"#FFC849"}
               textAlign={"center"}
-              p={"0 78px"}
+              p={{
+                xs: "0 10px",
+                sm: "0 15px",
+                md: "0 20px",
+                xl: "0 78px",
+              }}
             >
               Saniiro CRM has been featured across multiple Gartner Magic
               Quadrants since 2011
             </Typography>
           </Stack>
-          <Stack direction={"row"} gap={5}>
+          <Stack
+            direction={"row"}
+            gap={5}
+            width={{ xs: "95%" }}
+            justifyContent={{ xs: "center" }}
+          >
             {lists.map((d) => (
               <Stack alignItems={"center"}>
                 <Stack direction={"row"} alignItems={"Center"} gap={2}>
                   <img
                     src={d.left}
                     alt=""
-                    style={{ width: "28px", height: "85px" }}
+                    style={{
+                      width: {
+                        xs: "20px",
+                        sm: "25px",
+                        xl: "30px",
+                      },
+                      height: {
+                        xs: "20px",
+                        sm: "25px",
+                        md: "30px",
+                        xl: "85px",
+                      },
+                    }}
                   />
                   <Typography
                     color={"white"}
                     textAlign={"center"}
+                    fontSize={{
+                      xs: "8px",
+                      sm: "10px",
+                      md: "12px",
+                      xl:"18px"
+                    }}
                     dangerouslySetInnerHTML={{ __html: d.title }}
                   />
                   <img
@@ -83,7 +116,7 @@ const Industries2 = () => {
       </Stack>
 
       {/* for mobile view  */}
-      <Stack
+      {/* <Stack
         display={{
           xs: "flex",
           lg: "none",
@@ -168,7 +201,7 @@ const Industries2 = () => {
         <Stack>
           <FeaturesBysize />
         </Stack>
-      </Stack>
+      </Stack> */}
     </>
   );
 };

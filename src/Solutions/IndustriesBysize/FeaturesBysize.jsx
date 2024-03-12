@@ -388,22 +388,33 @@ function FeaturesBysize() {
     <>
       {/* Desktop view  */}
       <Stack
-        display={{
-          xs: "none",
-          lg: "flex",
-        }}
-        direction={"row"}
+        // display={{
+        //   xs: "none",
+        //   lg: "flex",
+        // }}
+        direction={{ xl: "row", xs: "column" }}
         alignItems={"start"}
-        pt={40}
-        width={"85%"}
+        pt={{ xl: 40, xs: "none" }}
+        width={{ xl: "85%", xs: "100%" }}
       >
         <Stack
           className="sidebar"
+          width={{ xl: "20%", xs: "100%" }}
           alignItems={"center"}
           p={"20px 0"}
           bgcolor={"white"}
+          zIndex={11}
         >
-          <Stack width={"29%"}>
+          <Stack
+          height={{xs:"55px",xl:""}}
+            width={{ xl: "29%", xs: "95%" }}
+            // display={"fixed"}
+            margin={"0 auto"}
+            direction={{ xl: "column", xs: "row" }}
+            gap={{xl:2,xs:"30px"}}
+            sx={{ overflowY: { xs: "auto", xl: "none" } }}
+            // justifyContent={"center"}
+          >
             {lists.map((d) => (
               <ul>
                 <li
@@ -413,126 +424,243 @@ function FeaturesBysize() {
                   {d.heading}
                 </li>
               </ul>
+              // <Box
+              //   marginBottom={"15px"}
+              //   border={"1px solid lightgrey"}
+              //   borderRadius={"10px"}
+              //   margin={"5px"}
+              //   padding={{
+              //     xs: "10px 5px",
+              //     sm: "10px 5px",
+              //     md: "10px 5px",
+              //   }}
+              //   sx={{
+              //     "&:hover": {
+              //       cursor: "pointer",
+              //       backgroundColor: "#F0F8FE",
+              //     },
+              //   }}
+              //   alignItems={"center"}
+              //   onClick={() => handleItemClick(`item${d.id}`)}
+              //   className={activeItem === `item${d.id}` ? "active" : ""}
+              // >
+              //   {d.heading}
+              // </Box>
             ))}
           </Stack>
         </Stack>
-        <Stack width={"80%"} gap={2}>
-          {lists2.map((d) => (
-            <Stack className="content" bgcolor={d.bgcolor}>
-              <Stack minHeight={0} gap={2} id={`item${d.id}`} className="item">
-                <Typography
-                  fontWeight={"bold"}
-                  fontSize={"35px"}
-                  color={d.id === "4" || d.id === "6" ? "white" : "black"}
-                  textAlign={"center"}
-                  dangerouslySetInnerHTML={{ __html: d.title }}
-                />
-
-                <Typography
-                  p={d.id === "1" ? "0 52px" : "0"}
-                  textAlign={"center"}
-                  fontSize={"16px"}
-                  dangerouslySetInnerHTML={{ __html: d.description }}
-                  color={d.id === "4" || d.id === "6" ? "white" : "black"}
-                />
-                {d.id !== "2.5" && (
-                  <Button
-                    endIcon={<EastIcon />}
-                    sx={{
-                      bgcolor: "transparent",
-                      color:
-                        d.id === "4"
-                          ? "#DF7E00"
-                          : d.id === "6"
-                          ? "white"
-                          : "#0079FF",
-                      fontSize: "16px",
-                      fontWeight: "bold",
-                      pl: "0px",
-                      "&:hover": {
-                        backgroundColor: "transparent",
-                        color: "#0079FF",
-                        textDecoration: "underline",
-                      },
-                    }}
+        <Stack
+          margin={"0 auto"}
+          bgcolor={"#F8F8F8"}
+          width={"100%"}
+          height={"fit-content"}
+          alignItems={"center"}
+        >
+          <Stack direction={"row"} alignItems={"start"} width={"95%"}>
+            <Stack width={{ xl: "80%", xs: "none" }} gap={2}>
+              {lists2.map((d) => (
+                <Stack className="content" bgcolor={d.bgcolor}>
+                  <Stack
+                    minHeight={0}
+                    gap={2}
+                    id={`item${d.id}`}
+                    className="item"
                   >
-                    Learn More
-                  </Button>
-                )}
-                {d.id === "2.5" && (
-                  <Stack pt={1}>
-                    <Button
-                      sx={{
-                        width: "200px",
-                        fontSize: "18px",
-                        fontWeight: "bold",
-                        fontFamily: "Work Sans",
-                        p: 1.5,
+                    <Typography
+                      fontWeight={"bold"}
+                      fontSize={{
+                        xs: "16px",
+                        sm: "20px",
+                        md: "28px",
+                        xs: "35px",
                       }}
-                    >
-                      Request Demo
-                    </Button>
-                  </Stack>
-                )}
+                      color={d.id === "4" || d.id === "6" ? "white" : "black"}
+                      textAlign={"center"}
+                      dangerouslySetInnerHTML={{ __html: d.title }}
+                    />
 
-                <Stack
-                  direction={"row"}
-                  gap={"22px"}
-                  pt={2}
-                  flexWrap={"wrap"}
-                  justifyContent={"center"}
-                >
-                  {d.id === "1" &&
-                    d.items?.map((di) => (
-                      <Stack
-                        width={"27%"}
-                        direction={"row"}
-                        alignItems={"center"}
-                        gap={2}
-                        p={"20px"}
-                        borderRadius={2}
-                        border={"1px solid lightgrey"}
+                    <Typography
+                      p={{ xl: d.id === "1" ? "0 52px" : "0", xs: "0" }}
+                      textAlign={"center"}
+                      fontSize={{
+                        xs: "11px",
+                        sm: "14px",
+                        xl: "16px",
+                      }}
+                      dangerouslySetInnerHTML={{ __html: d.description }}
+                      color={d.id === "4" || d.id === "6" ? "white" : "black"}
+                    />
+                    {d.id !== "2.5" && (
+                      <Button
+                        endIcon={<EastIcon />}
+                        sx={{
+                          bgcolor: "transparent",
+                          color:
+                            d.id === "4"
+                              ? "#DF7E00"
+                              : d.id === "6"
+                              ? "white"
+                              : "#0079FF",
+                          fontSize: {
+                            xs: "12px",
+                            sm: "14px",
+                            xl: "16px",
+                          },
+                          fontWeight: "bold",
+                          pl: "0px",
+                          "&:hover": {
+                            backgroundColor: "transparent",
+                            color: "#0079FF",
+                            textDecoration: "underline",
+                          },
+                        }}
                       >
-                        <img
-                          src={di.src}
-                          alt=""
-                          style={{ width: "23px", height: "23px" }}
-                        />
-                        <Box
-                          bgcolor={"lightgray"}
-                          sx={{ content: "''", width: "1px", height: "20px" }}
-                        ></Box>
-                        <Typography
-                          fontSize={"16px"}
-                          fontWeight={"bold"}
-                          color={"black"}
+                        Learn More
+                      </Button>
+                    )}
+                    {d.id === "2.5" && (
+                      <Stack pt={1}>
+                        <Button
+                          sx={{
+                            width: "200px",
+                            fontSize: "18px",
+                            fontWeight: "bold",
+                            fontFamily: "Work Sans",
+                            p: 1.5,
+                          }}
                         >
-                          {di.title}
-                        </Typography>
+                          Request Demo
+                        </Button>
                       </Stack>
-                    ))}
-                  {d.id === "2" &&
-                    d.items?.map((d) => (
-                      <Stack width={"30%"} position={"relative"}>
-                        <img src={d.src} alt="" style={{ borderRadius: 1 }} />
-                        <Typography
-                          color={"white"}
-                          position={"absolute"}
-                          top={"50%"}
-                          left={"33%"}
-                        >
-                          Life Sciences
-                        </Typography>
-                      </Stack>
-                    ))}
+                    )}
+
+                    <Stack
+                      direction={"row"}
+                      gap={{
+                        xs: "6px",
+                        sm: "16px",
+                        md: "20px",
+                        xl: "22px",
+                      }}
+                      pt={{ xl: 2, xs: 1 }}
+                      flexWrap={"wrap"}
+                      justifyContent={"center"}
+                    >
+                      {d.id === "1" &&
+                        d.items?.map((di) => (
+                          <Stack
+                            width={{ xl: "27%", xs: "37%" }}
+                            direction={"row"}
+                            alignItems={"center"}
+                            gap={{
+                              xs: "4px",
+                              sm: "6px",
+                              md: "10px",
+                              xl: 2,
+                            }}
+                            p={{
+                              xs: "5px",
+                              sm: "8px",
+                              xl: "20px",
+                            }}
+                            borderRadius={2}
+                            border={"1px solid lightgrey"}
+                          >
+                            {/* <img
+                              src={di.src}
+                              alt=""
+                              style={{ width: "23px", height: "23px" }}
+                            />
+                            <Box
+                              bgcolor={"lightgray"}
+                              sx={{
+                                content: "''",
+                                width: "1px",
+                                height: "20px",
+                              }}
+                            ></Box> */}
+                            <Box
+                              width={{
+                                xs: "15px",
+                                sm: "44px",
+                                md: "23px",
+                              }}
+                              height={{
+                                xs: "15px",
+                                sm: "28px",
+                                md: "23px",
+                              }}
+                            >
+                              <img
+                                src={di.src}
+                                alt=""
+                                width={"100%"}
+                                height={"100%"}
+                              />
+                            </Box>
+
+                            <Typography
+                              fontSize={{
+                                xs: "12px",
+                                sm: "9px",
+                                md: "16px",
+                                xl: "16px",
+                              }}
+                              fontWeight={"bold"}
+                              color={"black"}
+                            >
+                              {di.title}
+                            </Typography>
+                          </Stack>
+                        ))}
+                      {d.id === 2 &&
+                        d.items?.map((d) => (
+                          <Stack
+                            width={{ xl: "30%", xs: "45%" }}
+                            position={"relative"}
+                          >
+                            <img
+                              src={d.src}
+                              alt=""
+                              style={{ borderRadius: 1 }}
+                            />
+                            <Typography
+                              width={"fit-content"}
+                              height={"fit-content"}
+                              fontSize={{
+                                xs: "8px",
+                                sm: "9px",
+                                md: "16px",
+                              }}
+                              color={"white"}
+                              position={"absolute"}
+                              sx={{
+                                top: {xl:0,xs:"50%"},
+                                bottom: 0,
+                                marginTop: "auto",
+                                marginBottom: "auto",
+                                left: {xl:0,xs:"33%"},
+                                right: 0,
+                                marginLeft: "auto",
+                                marginRight: "auto",
+                              }}
+                              
+                             
+                            >
+                              Life Sciences
+                            </Typography>
+                          </Stack>
+                        ))}
+                    </Stack>
+                  </Stack>
                 </Stack>
-              </Stack>
+              ))}
             </Stack>
-          ))}
+          </Stack>
         </Stack>
       </Stack>
       {/* mobile view  */}
-      <Stack
+      {/* <Stack
         display={{
           xs: "flex",
           lg: "none",
@@ -770,7 +898,7 @@ function FeaturesBysize() {
             </Stack>
           </Stack>
         </Stack>
-      </Stack>
+      </Stack> */}
     </>
   );
 }
