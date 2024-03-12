@@ -533,7 +533,14 @@ function FeaturesMain() {
             }}
             direction={"row"}
             gap={2}
-            sx={{ overflowY: "auto" }}
+            sx={{
+              overflowY: "scroll",
+              scrollbarWidth: "none",
+              scrollbarColor: "transparent transparent",
+              "&::-webkit-scrollbar": {
+                display: "none",
+              },
+            }}
             justifyContent={"center"}
           >
             {lists.map((d) => (

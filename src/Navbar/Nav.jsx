@@ -502,8 +502,9 @@ const Nav = () => {
 
       {/* for Mobile view */}
       <Stack
+        m={"0 auto"}
         alignItems={"end"}
-        width={"98%"}
+        width={"100%"}
         sx={{
           display: {
             xs: "flex",
@@ -517,7 +518,7 @@ const Nav = () => {
           alignSelf={"center"}
           justifyContent={"space-between"}
           alignItems={"center"}
-          padding={"20px 29px"}
+          padding={"20px 0px"}
         >
           <Stack width={{ xs: "45%", md: "30%" }}>
             <Link to={"/"}>

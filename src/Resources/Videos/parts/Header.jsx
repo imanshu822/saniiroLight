@@ -5,7 +5,16 @@ import { Link } from "react-router-dom";
 const BlogBanner = (props) => {
   console.log(props);
   return (
-    <Stack marginTop={"40px"} alignItems={"center"} position={"relative"}>
+    <Stack
+      marginTop={{
+        lg: "40px",
+        md: "30px",
+        sm: "20px",
+        xs: "10px",
+      }}
+      alignItems={"center"}
+      position={"relative"}
+    >
       <Stack
         direction={"column"}
         justifyContent={"center"}
@@ -13,17 +22,43 @@ const BlogBanner = (props) => {
       >
         <Box
           component="img"
-          width={"1036px"}
+          width={{
+            lg: "1036px",
+            md: "90%",
+            sm: "100%",
+            xs: "100%",
+          }}
           height={"211px"}
           alt="The house from the offer."
           src={FramImg}
         ></Box>
       </Stack>
-      <Stack marginTop={"46px"} position={"absolute"}>
+      <Stack
+        alignSelf={"center"}
+        width={{
+          lg: "70%",
+          md: "90%",
+          sm: "95%",
+          xs: "95%",
+        }}
+        mt={{
+          lg: "40px",
+          md: "40px",
+          sm: "40px",
+          xs: "40px",
+        }}
+        position={"absolute"}
+      >
         <Typography
           sx={{
+            width: "100%",
             fontFamily: "Work Sans",
-            fontSize: "50px",
+            fontSize: {
+              lg: "50px",
+              md: "40px",
+              sm: "30px",
+              xs: "20px",
+            },
             fontWeight: 600,
             lineHeight: "50px",
             letterSpacing: "0em",
@@ -36,8 +71,14 @@ const BlogBanner = (props) => {
         </Typography>
         <Typography
           sx={{
+            width: "100%",
             fontFamily: "Work Sans",
-            fontSize: "50px",
+            fontSize: {
+              lg: "50px",
+              md: "40px",
+              sm: "30px",
+              xs: "20px",
+            },
             fontWeight: 600,
             lineHeight: "53px",
             letterSpacing: "0em",

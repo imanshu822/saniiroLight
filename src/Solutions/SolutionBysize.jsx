@@ -44,6 +44,7 @@ const SolutionBysize = () => {
           <Footer />
         </Stack>
       </Stack>
+
       {/* for mobile view  */}
       {/* <Stack
         display={{

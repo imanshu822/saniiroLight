@@ -1,108 +1,108 @@
-import { Box, Stack, Typography } from '@mui/material'
-import React from 'react'
+import { Box, Stack, Typography } from "@mui/material";
+import React from "react";
 import indiaFlag from "../../assets/indiaflag.svg";
-import USAflag from "../../assets/USAflag.svg"
+import USAflag from "../../assets/USAflag.svg";
 const Offices = () => {
-    const lists = [
-      {
-        state: "Chennai",
-        address:
-          "Estancia IT Park, Plot no. 140, 151, GST Road, Vallancheri, Chengalpattu District, Tamil Nadu - 603202,India",
-        phone1: "044 - 69656070",
-        phone2: "044 - 69656070",
-        Fax: "044 67447172",
-      },
-      {
-        state: "Bihar",
-        address:
-          "Estancia IT Park, Plot no. 140, 151, GST Road, Vallancheri, Chengalpattu District, Tamil Nadu - 603202,India",
-        phone1: "044 - 69656070",
-        phone2: "044 - 69656070",
-        Fax: "044 67447172",
-      },
-      {
-        state: "Jaipur",
-        address:
-          "Estancia IT Park, Plot no. 140, 151, GST Road, Vallancheri, Chengalpattu District, Tamil Nadu - 603202,India",
-        phone1: "044 - 69656070",
-        phone2: "044 - 69656070",
-        Fax: "044 67447172",
-      },
-      {
-        state: "Delhi",
-        address:
-          "Estancia IT Park, Plot no. 140, 151, GST Road, Vallancheri, Chengalpattu District, Tamil Nadu - 603202,India",
-        phone1: "044 - 69656070",
-        phone2: "044 - 69656070",
-        Fax: "044 67447172",
-      },
-      {
-        state: "Mumbai",
-        address:
-          "Estancia IT Park, Plot no. 140, 151, GST Road, Vallancheri, Chengalpattu District, Tamil Nadu - 603202,India",
-        phone1: "044 - 69656070",
-        phone2: "044 - 69656070",
-        Fax: "044 67447172",
-      },
-      {
-        state: "Bangalore",
-        address:
-          "Estancia IT Park, Plot no. 140, 151, GST Road, Vallancheri, Chengalpattu District, Tamil Nadu - 603202,India",
-        phone1: "044 - 69656070",
-        phone2: "044 - 69656070",
-        Fax: "044 67447172",
-      },
-    ];
-    const list2 = [
-      {
-        state: "New York",
-        address:
-          "Estancia IT Park, Plot no. 140, 151, GST Road, Vallancheri, Chengalpattu District, Tamil Nadu - 603202,India",
-        phone1: "044 - 69656070",
-        phone2: "044 - 69656070",
-        Fax: "044 67447172",
-      },
-      {
-        state: "Alaska",
-        address:
-          "Estancia IT Park, Plot no. 140, 151, GST Road, Vallancheri, Chengalpattu District, Tamil Nadu - 603202,India",
-        phone1: "044 - 69656070",
-        phone2: "044 - 69656070",
-        Fax: "044 67447172",
-      },
-      {
-        state: "Maryland",
-        address:
-          "Estancia IT Park, Plot no. 140, 151, GST Road, Vallancheri, Chengalpattu District, Tamil Nadu - 603202,India",
-        phone1: "044 - 69656070",
-        phone2: "044 - 69656070",
-        Fax: "044 67447172",
-      },
-      {
-        state: "New jersey",
-        address:
-          "Estancia IT Park, Plot no. 140, 151, GST Road, Vallancheri, Chengalpattu District, Tamil Nadu - 603202,India",
-        phone1: "044 - 69656070",
-        phone2: "044 - 69656070",
-        Fax: "044 67447172",
-      },
-      {
-        state: "Texas",
-        address:
-          "Estancia IT Park, Plot no. 140, 151, GST Road, Vallancheri, Chengalpattu District, Tamil Nadu - 603202,India",
-        phone1: "044 - 69656070",
-        phone2: "044 - 69656070",
-        Fax: "044 67447172",
-      },
-      {
-        state: "Florida",
-        address:
-          "Estancia IT Park, Plot no. 140, 151, GST Road, Vallancheri, Chengalpattu District, Tamil Nadu - 603202,India",
-        phone1: "044 - 69656070",
-        phone2: "044 - 69656070",
-        Fax: "044 67447172",
-      },
-    ];
+  const lists = [
+    {
+      state: "Chennai",
+      address:
+        "Estancia IT Park, Plot no. 140, 151, GST Road, Vallancheri, Chengalpattu District, Tamil Nadu - 603202,India",
+      phone1: "044 - 69656070",
+      phone2: "044 - 69656070",
+      Fax: "044 67447172",
+    },
+    {
+      state: "Bihar",
+      address:
+        "Estancia IT Park, Plot no. 140, 151, GST Road, Vallancheri, Chengalpattu District, Tamil Nadu - 603202,India",
+      phone1: "044 - 69656070",
+      phone2: "044 - 69656070",
+      Fax: "044 67447172",
+    },
+    {
+      state: "Jaipur",
+      address:
+        "Estancia IT Park, Plot no. 140, 151, GST Road, Vallancheri, Chengalpattu District, Tamil Nadu - 603202,India",
+      phone1: "044 - 69656070",
+      phone2: "044 - 69656070",
+      Fax: "044 67447172",
+    },
+    {
+      state: "Delhi",
+      address:
+        "Estancia IT Park, Plot no. 140, 151, GST Road, Vallancheri, Chengalpattu District, Tamil Nadu - 603202,India",
+      phone1: "044 - 69656070",
+      phone2: "044 - 69656070",
+      Fax: "044 67447172",
+    },
+    {
+      state: "Mumbai",
+      address:
+        "Estancia IT Park, Plot no. 140, 151, GST Road, Vallancheri, Chengalpattu District, Tamil Nadu - 603202,India",
+      phone1: "044 - 69656070",
+      phone2: "044 - 69656070",
+      Fax: "044 67447172",
+    },
+    {
+      state: "Bangalore",
+      address:
+        "Estancia IT Park, Plot no. 140, 151, GST Road, Vallancheri, Chengalpattu District, Tamil Nadu - 603202,India",
+      phone1: "044 - 69656070",
+      phone2: "044 - 69656070",
+      Fax: "044 67447172",
+    },
+  ];
+  const list2 = [
+    {
+      state: "New York",
+      address:
+        "Estancia IT Park, Plot no. 140, 151, GST Road, Vallancheri, Chengalpattu District, Tamil Nadu - 603202,India",
+      phone1: "044 - 69656070",
+      phone2: "044 - 69656070",
+      Fax: "044 67447172",
+    },
+    {
+      state: "Alaska",
+      address:
+        "Estancia IT Park, Plot no. 140, 151, GST Road, Vallancheri, Chengalpattu District, Tamil Nadu - 603202,India",
+      phone1: "044 - 69656070",
+      phone2: "044 - 69656070",
+      Fax: "044 67447172",
+    },
+    {
+      state: "Maryland",
+      address:
+        "Estancia IT Park, Plot no. 140, 151, GST Road, Vallancheri, Chengalpattu District, Tamil Nadu - 603202,India",
+      phone1: "044 - 69656070",
+      phone2: "044 - 69656070",
+      Fax: "044 67447172",
+    },
+    {
+      state: "New jersey",
+      address:
+        "Estancia IT Park, Plot no. 140, 151, GST Road, Vallancheri, Chengalpattu District, Tamil Nadu - 603202,India",
+      phone1: "044 - 69656070",
+      phone2: "044 - 69656070",
+      Fax: "044 67447172",
+    },
+    {
+      state: "Texas",
+      address:
+        "Estancia IT Park, Plot no. 140, 151, GST Road, Vallancheri, Chengalpattu District, Tamil Nadu - 603202,India",
+      phone1: "044 - 69656070",
+      phone2: "044 - 69656070",
+      Fax: "044 67447172",
+    },
+    {
+      state: "Florida",
+      address:
+        "Estancia IT Park, Plot no. 140, 151, GST Road, Vallancheri, Chengalpattu District, Tamil Nadu - 603202,India",
+      phone1: "044 - 69656070",
+      phone2: "044 - 69656070",
+      Fax: "044 67447172",
+    },
+  ];
   return (
     <Stack bgcolor={"#F6F8FF"} pt={5}>
       <Stack alignItems={"center"} gap={1}>
@@ -204,6 +204,6 @@ const Offices = () => {
       </Stack>
     </Stack>
   );
-}
+};
 
-export default Offices
+export default Offices;

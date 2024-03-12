@@ -5,7 +5,12 @@ const VideoCard = ({ img, title, description, duration }) => {
   return (
     <Stack
       spacing={2}
-      width={"430px"}
+      width={{
+        lg: "280px",
+        md: "430px",
+        sm: "430px",
+        xs: "300px",
+      }}
       borderRadius={"10px"}
       position={"relative"}
     >
@@ -39,7 +44,12 @@ const VideoCard = ({ img, title, description, duration }) => {
       </Stack>
       <Box
         component="img"
-        width={"430px"}
+        width={{
+          lg: "280px",
+          md: "430px",
+          sm: "430px",
+          xs: "300px",
+        }}
         height={"210px"}
         src={img}
         alt="video thumbnail"

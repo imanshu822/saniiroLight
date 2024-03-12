@@ -10,8 +10,8 @@ const WatchMoreVideos = () => {
       <Nav />
       <Header />
       <VideoFeedSection />
-      <Signupfree />
-      <Footer />
+      {/* <Signupfree /> */}
+      {/* <Footer /> */}
     </div>
   );
 };

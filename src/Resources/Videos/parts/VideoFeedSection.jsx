@@ -123,121 +123,306 @@ const VideoFeedSection = () => {
     : videos;
 
   return (
-    <Stack
-      marginTop={"40px"}
-      marginBottom={"40px"}
-      width={"1420px"}
-      direction={"row"}
-      justifyContent={"center"}
-      gap={4}
-    >
-      <Stack width={"400px"} display={"sticky"}>
-        {/* Category Sidebar */}
-        <Stack marginLeft={"20%"} marginTop={"20px"}>
-          <Typography
-            sx={{
-              fontFamily: "Work Sans",
-              fontSize: "20px",
-              fontWeight: 600,
-              lineHeight: "21px",
-              letterSpacing: "0em",
-              textAlign: "center",
-              color: "#34A853",
-            }}
-          >
-            CRM FOR BEGINNERS
-          </Typography>
-          <hr
-            style={{
-              width: "70%",
-              border: "1px solid #34A853",
-              marginTop: "3px",
-              marginBottom: "30px",
-            }}
-          />
-          <Stack
-            direction={"column"}
-            justifyContent={"center"}
-            paddingLeft={"70px"}
-            gap={3}
-          >
-            {VideoCategories.map((category) => (
-              <Typography
-                key={category.id}
-                onClick={() => handleCategoryClick(category.category)}
-                style={{
-                  cursor: "pointer",
-                  color:
-                    selectedCategory === category.category
-                      ? "#34A853"
-                      : "inherit",
-                }}
-              >
-                {category.category}
-              </Typography>
-            ))}
-          </Stack>
-        </Stack>
-      </Stack>
-      {/* Video Display Section */}
-      <Stack width={"1020px"} direction={"column"}>
-        <Stack padding={"10px 30px "}>
-          <Stack direction={"row"} justifyContent={"space-between"}>
+    <>
+      <Stack
+        display={{
+          lg: "flex",
+          xs: "none",
+        }}
+        width={"90%"}
+        margin={"40px auto"}
+        direction={"row"}
+        justifyContent={"center"}
+        gap={4}
+      >
+        <Stack width={"20%"} display={"sticky"}>
+          {/* Category Sidebar */}
+          <Stack margin={"20px auto 0"}>
             <Typography
               sx={{
                 fontFamily: "Work Sans",
-                fontSize: "25px",
-                fontWeight: 700,
-                lineHeight: "37px",
+                fontSize: "20px",
+                fontWeight: 600,
+                lineHeight: "21px",
                 letterSpacing: "0em",
-                textAlign: "left",
-                color: "#000000",
+                textAlign: "center",
+                color: "#34A853",
               }}
             >
-              CRM for Beginners
+              CRM FOR BEGINNERS
             </Typography>
-            <Stack width={"250px"} height={"40px"} marginBottom={"10px"}>
-              <input
-                type="text"
-                placeholder="Search Videos"
-                style={{ height: "40px", width: "80%" }}
-              />
-            </Stack>
-          </Stack>
-          <hr
-            style={{
-              width: "100%",
-              border: "1px solid #34A853",
-              marginTop: "3px",
-              marginBottom: "20px",
-            }}
-          />
-          {/* Display filtered videos or no videos found message */}
-          {filteredVideos.length > 0 ? (
-            <Stack direction={"row"} gap={2} flexWrap={"wrap"}>
-              {filteredVideos.map((video) => (
-                <Link
-                  onClick={handleClick}
-                  key={video.id}
-                  to={`/Resources/Videos/WatchMoreVideos/PlayVideo/${video.id}`} // Corrected link generation
-                  style={{ textDecoration: "none" }} // Ensure proper styling for Link
+            <hr
+              style={{
+                width: "80%",
+                border: "1px solid #34A853",
+                marginTop: "6px",
+                marginBottom: "30px",
+              }}
+            />
+            <Stack
+              direction={"column"}
+              justifyContent={"center"}
+              paddingLeft={"10%"}
+              gap={3}
+            >
+              {VideoCategories.map((category) => (
+                <Typography
+                  key={category.id}
+                  onClick={() => handleCategoryClick(category.category)}
+                  style={{
+                    cursor: "pointer",
+                    color:
+                      selectedCategory === category.category
+                        ? "#34A853"
+                        : "inherit",
+                  }}
                 >
-                  <VideoCard
-                    key={video.id}
-                    img={video.src}
-                    title={video.title}
-                    description={video.discription}
-                    duration={video.duration}
-                  />
-                </Link>
+                  {category.category}
+                </Typography>
               ))}
             </Stack>
-          ) : (
-            <Typography variant="body1">No videos found.</Typography>
-          )}
+          </Stack>
+        </Stack>
+        <Stack width={"80%"} direction={"column"}>
+          <Stack padding={"10px 30px "}>
+            <Stack direction={"row"} justifyContent={"space-between"}>
+              <Typography
+                sx={{
+                  fontFamily: "Work Sans",
+                  fontSize: "25px",
+                  fontWeight: 700,
+                  lineHeight: "37px",
+                  letterSpacing: "0em",
+                  textAlign: "left",
+                  color: "#000000",
+                }}
+              >
+                CRM for Beginners
+              </Typography>
+              <Stack width={"250px"} height={"40px"} marginBottom={"10px"}>
+                <input
+                  type="text"
+                  placeholder="Search Videos"
+                  style={{ height: "40px", width: "80%" }}
+                />
+              </Stack>
+            </Stack>
+            <hr
+              style={{
+                width: "100%",
+                border: "1px solid #34A853",
+                marginTop: "3px",
+                marginBottom: "20px",
+              }}
+            />
+            {filteredVideos.length > 0 ? (
+              <Stack
+                direction={"row"}
+                gap={2}
+                flexWrap={"wrap"}
+                justifyContent={"center"}
+              >
+                {filteredVideos.map((video) => (
+                  <Link
+                    onClick={handleClick}
+                    key={video.id}
+                    to={`/Resources/Videos/WatchMoreVideos/PlayVideo/${video.id}`}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <VideoCard
+                      key={video.id}
+                      img={video.src}
+                      title={video.title}
+                      description={video.discription}
+                      duration={video.duration}
+                    />
+                  </Link>
+                ))}
+              </Stack>
+            ) : (
+              <Typography variant="body1">No videos found.</Typography>
+            )}
+          </Stack>
         </Stack>
       </Stack>
-    </Stack>
+
+      <Stack
+        display={{
+          xs: "flex",
+          xl: "none",
+        }}
+        margin={"0 auto"}
+        marginTop={"40px"}
+        marginBottom={"40px"}
+        width={{
+          lg: "100%",
+          xs: "95%",
+        }}
+        direction={{
+          lg: "row",
+          xs: "column",
+        }}
+        justifyContent={"center"}
+        gap={4}
+      >
+        <Stack
+          display={{
+            xs: "flex",
+            lg: "none",
+          }}
+          width={{
+            lg: "100%",
+            md: "100%",
+            xs: "100%",
+          }}
+        >
+          <Stack>
+            <Typography
+              sx={{
+                fontFamily: "Work Sans",
+                fontSize: "20px",
+                fontWeight: 600,
+                lineHeight: "21px",
+                letterSpacing: "0em",
+                textAlign: "center",
+                color: "#34A853",
+              }}
+            >
+              CRM FOR BEGINNERS
+            </Typography>
+            <hr
+              style={{
+                width: "70%",
+                border: "1px solid #34A853",
+                marginTop: "3px",
+                marginBottom: "30px",
+              }}
+            />
+            <Stack
+              direction={"row"}
+              justifyContent={"center"}
+              paddingLeft={"70px"}
+              gap={3}
+              overflow={"auto"}
+            >
+              {VideoCategories.map((category) => (
+                <Typography
+                  key={category.id}
+                  onClick={() => handleCategoryClick(category.category)}
+                  style={{
+                    cursor: "pointer",
+                    color:
+                      selectedCategory === category.category
+                        ? "#34A853"
+                        : "inherit",
+                  }}
+                >
+                  {category.category}
+                </Typography>
+              ))}
+            </Stack>
+          </Stack>
+        </Stack>
+        <Stack
+          width={{
+            lg: "1020px",
+            md: "100%",
+          }}
+          direction={"column"}
+        >
+          <Stack
+            padding={{
+              lg: "10px 30px ",
+              xs: 0,
+            }}
+            width={"100%"}
+            margin={"0 auto"}
+          >
+            <Stack
+              width={{
+                lg: "100%",
+                sm: "100%",
+              }}
+              direction={{
+                lg: "row",
+                xs: "column",
+              }}
+              justifyContent={{
+                lg: "space-between",
+                xs: "center",
+              }}
+              m={"0 auto"}
+            >
+              <Typography
+                sx={{
+                  fontFamily: "Work Sans",
+                  fontSize: "25px",
+                  fontWeight: 700,
+                  lineHeight: "37px",
+                  letterSpacing: "0em",
+                  textAlign: "left",
+                  color: "#000000",
+                }}
+              >
+                CRM for Beginners
+              </Typography>
+              <Stack
+                width={{
+                  lg: "250px",
+                  xs: "100%",
+                }}
+                m={"0 auto"}
+                height={"40px"}
+                marginBottom={{
+                  lg: "10px",
+                }}
+              >
+                <input
+                  type="text"
+                  placeholder="Search Videos"
+                  style={{ height: "40px", width: "80%" }}
+                />
+              </Stack>
+            </Stack>
+            <hr
+              style={{
+                width: "100%",
+                border: "1px solid #34A853",
+                marginTop: "20px",
+                marginBottom: "20px",
+              }}
+            />
+            {filteredVideos.length > 0 ? (
+              <Stack
+                direction={"row"}
+                gap={2}
+                flexWrap={"wrap"}
+                justifyContent={"center"}
+              >
+                {filteredVideos.map((video) => (
+                  <Link
+                    onClick={handleClick}
+                    key={video.id}
+                    to={`/Resources/Videos/WatchMoreVideos/PlayVideo/${video.id}`} // Corrected link generation
+                    style={{ textDecoration: "none" }} // Ensure proper styling for Link
+                  >
+                    <VideoCard
+                      key={video.id}
+                      img={video.src}
+                      title={video.title}
+                      description={video.discription}
+                      duration={video.duration}
+                    />
+                  </Link>
+                ))}
+              </Stack>
+            ) : (
+              <Typography variant="body1">No videos found.</Typography>
+            )}
+          </Stack>
+        </Stack>
+      </Stack>
+    </>
   );
 };
 

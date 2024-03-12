@@ -406,18 +406,26 @@ function FeaturesBysize() {
           zIndex={11}
         >
           <Stack
-          height={{xs:"55px",xl:""}}
+            height={{ xs: "55px", xl: "" }}
             width={{ xl: "29%", xs: "95%" }}
             // display={"fixed"}
             margin={"0 auto"}
             direction={{ xl: "column", xs: "row" }}
-            gap={{xl:2,xs:"30px"}}
-            sx={{ overflowY: { xs: "auto", xl: "none" } }}
+            gap={{ xl: 2, xs: "30px" }}
+            sx={{
+              overflowY: "scroll",
+              scrollbarWidth: "none",
+              scrollbarColor: "transparent transparent",
+              "&::-webkit-scrollbar": {
+                display: "none",
+              },
+            }}
             // justifyContent={"center"}
           >
             {lists.map((d) => (
               <ul>
                 <li
+                  style={{ listStyle: "none" }}
                   onClick={() => handleItemClick(`item${d.id}`)}
                   className={activeItem === `item${d.id}` ? "active" : ""}
                 >
@@ -635,17 +643,15 @@ function FeaturesBysize() {
                               color={"white"}
                               position={"absolute"}
                               sx={{
-                                top: {xl:0,xs:"50%"},
+                                top: { xl: 0, xs: "50%" },
                                 bottom: 0,
                                 marginTop: "auto",
                                 marginBottom: "auto",
-                                left: {xl:0,xs:"33%"},
+                                left: { xl: 0, xs: "33%" },
                                 right: 0,
                                 marginLeft: "auto",
                                 marginRight: "auto",
                               }}
-                              
-                             
                             >
                               Life Sciences
                             </Typography>
