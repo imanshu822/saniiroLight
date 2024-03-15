@@ -104,15 +104,27 @@ const PlayVideo = () => {
   return (
     <>
       <Nav />
-      <Stack width={"1420px"} margin={"20px auto 50px"}>
-        <Stack
-          width={"1240px"}
-          margin={"30px auto"}
-          direction={"column"}
-          gap={4}
-        >
-          <Stack direction={"row"} gap={2}>
-            <Stack width={"60%"} height={"400px"} border={"1px solid gray"}>
+      <Stack width={"100%"} margin={"20px auto 50px"}>
+        <Stack width={"90%"} margin={"30px auto"} direction={"column"} gap={4}>
+          <Stack
+            direction={{
+              xs: "column",
+              sm: "column",
+              md: "column",
+              lg: "row",
+              xl: "row",
+            }}
+            gap={2}
+          >
+            <Stack
+              width={{
+                xs: "100%",
+                lg: "60%",
+                xl: "60%",
+              }}
+              height={"400px"}
+              border={"1px solid gray"}
+            >
               <ReactPlayer
                 controls
                 url="https://www.youtube.com/watch?v=SlhESAKF1Tk"
@@ -130,8 +142,52 @@ const PlayVideo = () => {
               ></ReactPlayer>
             </Stack>
             <Stack
-              width={"40%"}
-              height={"400px"}
+              display={{
+                xs: "flex",
+                lg: "none",
+              }}
+              width={"100%"}
+              gap={1}
+            >
+              <Typography
+                sx={{
+                  fontFamily: "Work Sans",
+                  fontSize: "28px",
+                  fontWeight: 600,
+                  lineHeight: "30px",
+                  letterSpacing: "0em",
+                  textAlign: "left",
+                }}
+              >
+                Lead
+              </Typography>
+              <Typography
+                sx={{
+                  fontFamily: "Work Sans",
+                  fontSize: "14px",
+                  fontWeight: 400,
+                  lineHeight: "27px",
+                  letterSpacing: "0em",
+                  textAlign: "left",
+                }}
+              >
+                A "lead" can be defined as a raw prospect who might be
+                interested in purchasing from you, but you don't know for sure,
+                until you follow-up with them further.
+              </Typography>
+            </Stack>
+            <Stack
+              justifyContent={"flex-start"}
+              width={{
+                xs: "100%",
+                lg: "40%",
+                xl: "40%",
+              }}
+              height={{
+                xs: "100%",
+                lg: "400px",
+                xl: "400px",
+              }}
               gap={3}
               sx={{ overflowY: "auto" }}
             >
@@ -157,7 +213,14 @@ const PlayVideo = () => {
               ))}
             </Stack>
           </Stack>
-          <Stack width={"60%"} gap={1}>
+          <Stack
+            display={{
+              xs: "none",
+              lg: "flex",
+            }}
+            width={"60%"}
+            gap={1}
+          >
             <Typography
               sx={{
                 fontFamily: "Work Sans",

@@ -301,12 +301,24 @@ const VideoFeedSection = () => {
             <Stack
               direction={"row"}
               justifyContent={"center"}
-              paddingLeft={"70px"}
               gap={3}
-              overflow={"auto"}
+              sx={{
+                overflowY: "scroll",
+                scrollbarWidth: "none",
+                scrollbarColor: "transparent transparent",
+                "&::-webkit-scrollbar": {
+                  display: "none",
+                },
+              }}
             >
               {VideoCategories.map((category) => (
                 <Typography
+                  sx={{
+                    "&:hover": {
+                      cursor: "pointer",
+                      borderBottom: "1px solid grey",
+                    },
+                  }}
                   key={category.id}
                   onClick={() => handleCategoryClick(category.category)}
                   style={{
@@ -339,19 +351,12 @@ const VideoFeedSection = () => {
             margin={"0 auto"}
           >
             <Stack
-              width={{
-                lg: "100%",
-                sm: "100%",
-              }}
+              margin={"0 auto"}
+              width={"90%"}
               direction={{
                 lg: "row",
                 xs: "column",
               }}
-              justifyContent={{
-                lg: "space-between",
-                xs: "center",
-              }}
-              m={"0 auto"}
             >
               <Typography
                 sx={{

@@ -15,10 +15,18 @@ const BlogCard = ({ blog }) => {
   return (
     <Stack
       backgroundColor={"#FFFFFF"}
-      alignItems={"center"}
+      m={"0 auto"}
       sx={{
-        width: "384px",
-        height: "416px",
+        width: {
+          xs: "95%",
+          md: "344px",
+          lg: "384px",
+        },
+        height: {
+          xs: "100%",
+          md: "380px",
+          lg: "416px",
+        },
         objectFit: "cover",
         borderLeft: "1px solid rgba(0, 0, 0, 0.3)",
         borderRight: "1px solid rgba(0, 0, 0, 0.3)",
@@ -29,8 +37,14 @@ const BlogCard = ({ blog }) => {
       <Box
         component="img"
         sx={{
-          height: "50%",
-          width: "100%",
+          height: {
+            xs: "50%",
+            lg: "50%",
+          },
+          width: {
+            xs: "100%",
+            lg: "100%",
+          },
         }}
         alt="Blog Image"
         src={imgUrl} // Use the imgUrl directly as it already contains the correct path

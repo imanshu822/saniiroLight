@@ -3,7 +3,16 @@ import React from "react";
 import img from "../../../assets/Rectangle 4301.png";
 const VideoCard1 = ({ img, title, duration, discription }) => {
   return (
-    <Stack width={"90%"} height={"90px"} margin={"0px auto"}>
+    <Stack
+      width={{
+        xs: "100%",
+        sm: "100%",
+        md: "100%",
+        lg: "90%",
+      }}
+      height={"90px"}
+      margin={"0px auto"}
+    >
       <Stack direction={"row"} gap={2}>
         <Box
           component="img"

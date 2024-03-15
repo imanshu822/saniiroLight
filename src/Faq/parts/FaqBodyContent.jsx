@@ -4,16 +4,33 @@ import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 const FaqBodyContent = () => {
   return (
     <Stack
-      width={"1200px"}
+      width={{
+        xl: "1200px",
+        lg: " 85",
+        md: "90",
+        xs: "93%",
+      }}
       margin={"10px auto"}
-      direction={"row"}
+      direction={{
+        xs: "column",
+        lg: "row",
+      }}
       gap={2}
       padding={"30px 0px"}
     >
       <Stack
-        width={"850px"}
-        borderRight={"1px solid gray"}
-        paddingRight={"10px"}
+        width={{
+          lg: "850px",
+          xs: "100%",
+        }}
+        borderRight={{
+          lg: "1px solid #E5E5E5",
+          xs: "none",
+        }}
+        paddingRight={{
+          lg: "20px",
+          xs: "0px",
+        }}
       >
         <Stack gap={2}>
           <Typography
@@ -23,7 +40,10 @@ const FaqBodyContent = () => {
               fontWeight: 700,
               lineHeight: "45px",
               letterSpacing: "0em",
-              textAlign: "left",
+              textAlign: {
+                lg: "left",
+                xs: "center",
+              },
             }}
           >
             FAQs: Export Data from Zoho CRM
@@ -61,7 +81,10 @@ const FaqBodyContent = () => {
               lineHeight: "24px",
               letterSpacing: "0em",
               textAlign: "left",
-              marginLeft: "40px",
+              marginLeft: {
+                lg: "40px",
+                xs: "20px",
+              },
               gap: "15px",
             }}
           >
@@ -210,7 +233,10 @@ const FaqBodyContent = () => {
               lineHeight: "24px",
               letterSpacing: "0em",
               textAlign: "left",
-              marginLeft: "40px",
+              marginLeft: {
+                lg: "40px",
+                xs: "20px",
+              },
               gap: "15px",
             }}
           >
@@ -339,6 +365,7 @@ const FaqBodyContent = () => {
             </Typography>
           </Stack>
         </Stack>
+
         <br
           style={{
             width: "97%",
@@ -423,7 +450,10 @@ const FaqBodyContent = () => {
           direction={"row"}
           alignItems={"center"}
           sx={{
-            width: "702px",
+            width: {
+              lg: "702px",
+              xs: "90%",
+            },
             height: "66px",
             padding: "7px 15px",
             gap: "15px",
@@ -469,8 +499,10 @@ const FaqBodyContent = () => {
           direction={"column"}
           alignItems={"center"}
           sx={{
-            width: "702px",
-
+            width: {
+              lg: "702px",
+              xs: "90%",
+            },
             padding: "7px 15px",
             gap: "15px",
             margin: "50px 0",
@@ -480,7 +512,7 @@ const FaqBodyContent = () => {
           <Stack
             direction={"row"}
             justifyContent={"left"}
-            width={"100%"}
+            width={"90%"}
             padding={"20px 20px 0px 20px"}
           >
             <HelpOutlineIcon
@@ -506,7 +538,12 @@ const FaqBodyContent = () => {
             </Typography>
           </Stack>
 
-          <Typography>
+          <Typography
+            width={{
+              lg: "90%",
+              xs: "100%",
+            }}
+          >
             <ul>
               <li
                 sx={{
@@ -540,7 +577,12 @@ const FaqBodyContent = () => {
           </Typography>
         </Stack>
       </Stack>
-      <Stack width={"350px"}>
+      <Stack
+        width={{
+          lg: "350px",
+          xs: "100%",
+        }}
+      >
         <Stack padding={"20px 30px"} gap={3}>
           <Typography
             sx={{

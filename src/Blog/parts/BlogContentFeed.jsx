@@ -8,6 +8,7 @@ import TagSection from "./TagSection";
 import CommentForm from "./CommentForm";
 import RelatedPost from "./RelatedPost";
 import { Tags, Blogs, FeaturedPosts } from "./TagsBlogsData";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 const BlogFeed = () => {
   const [activeTags, setActiveTags] = useState([]);
@@ -36,27 +37,177 @@ const BlogFeed = () => {
     setActiveTags(tags);
     setCurrentPage(1);
   };
+
+  const [filterClicked, setFilterClicked] = useState(false);
+  const handleFilterClick = () => {
+    setFilterClicked(!filterClicked);
+  };
   return (
-    <Stack backgroundColor={"#F6F8FF"} minHeight={"1100px"}>
+    <Stack
+      backgroundColor={"#F6F8FF"}
+      minHeight={{
+        xs: "100%",
+        sm: "100%",
+        md: "100%",
+        lg: "100%",
+      }}
+      m={"0 auto"}
+    >
       <Stack>
-        <Stack position={"relative"} width={"1200px"} margin={"auto"}>
+        <Stack
+          alignSelf={"center"}
+          position="relative"
+          width={{
+            xs: "100%",
+            sm: "100%",
+            md: "100%",
+            lg: "1200px",
+          }}
+        >
           <Stack
-            direction={"column"}
+            width={"100%"}
+            direction="column"
             gap={2}
             sx={{
-              marginTop: " 0px",
+              marginTop: "0px",
               paddingTop: "30px",
             }}
+            m={"0 auto"}
+            justifyContent={{
+              xs: "center",
+            }}
           >
-            <Stack width={"790px"} direction={"column"} gap={2}>
+            <Stack
+              display={{
+                xs: "flex",
+                lg: "none",
+              }}
+              m={"0 auto"}
+              width={"95%"}
+            >
+              <Stack width={"100%"}>
+                <TextField
+                  sx={{
+                    height: "50px",
+                  }}
+                  id="outlined-basic"
+                  label="Search Job"
+                  variant="outlined"
+                  InputProps={{
+                    endAdornment: (
+                      <InputAdornment position="start">
+                        <SearchIcon
+                          sx={{
+                            color: "gray",
+                            position: "absolute",
+                            right: "10px",
+                            top: "50%",
+                            transform: "translateY(-50%)",
+                          }}
+                        />
+                      </InputAdornment>
+                    ),
+                  }}
+                />
+              </Stack>
+
+              <Stack
+                borderRadius={"5px"}
+                pb={2}
+                mt={2}
+                style={
+                  filterClicked
+                    ? {
+                        border: "1px solid lightgray",
+                        backgroundColor: "#dbe1f9",
+                      }
+                    : {}
+                }
+              >
+                <Stack
+                  onClick={handleFilterClick}
+                  border={"1px solid lightgray"}
+                  borderRadius={"5px"}
+                  p={2}
+                  minWidth={"50%"}
+                  direction={"row"}
+                  justifyContent={"space-between"}
+                  backgroundColor={"#F6F8FF"}
+                >
+                  {" "}
+                  <Typography
+                    sx={{
+                      fontFamily: "Work Sans",
+                      fontSize: "20px",
+                      fontWeight: 700,
+                      lineHeight: "21px",
+                      letterSpacing: "0em",
+                      textAlign: "left",
+                    }}
+                    width={"100%"}
+                    color={"#4DB267"}
+                  >
+                    Filter Blogs{" "}
+                  </Typography>
+                  <ArrowDropDownIcon />
+                </Stack>
+                {filterClicked && (
+                  <Stack width={"90%"} m={"0 auto"}>
+                    <Stack>
+                      <Box marginTop="25px">
+                        <Typography
+                          sx={{
+                            fontFamily: "Work Sans",
+                            fontSize: "20px",
+                            fontWeight: 700,
+                            lineHeight: "21px",
+                            letterSpacing: "0em",
+                            textAlign: "left",
+                          }}
+                          width={"100%"}
+                        >
+                          TAGS
+                        </Typography>
+                      </Box>
+                    </Stack>
+                    <TagSection
+                      activeTags={activeTags}
+                      setActiveTags={handleSetActiveTags}
+                      tags={Tags}
+                    />
+                  </Stack>
+                )}
+              </Stack>
+            </Stack>
+
+            <Stack
+              width={{
+                xs: "95%",
+              }}
+              m={"0 auto"}
+              direction="row"
+              flexWrap="wrap"
+              gap={2}
+              justifyContent={{
+                xs: "center",
+                lg: "left",
+              }}
+            >
               <Typography
                 sx={{
                   fontFamily: "Work Sans",
-                  fontSize: "40px",
+                  fontSize: {
+                    xs: "20px",
+                    md: "30px",
+                    lg: "40px",
+                  },
                   fontWeight: 600,
                   lineHeight: "47px",
                   letterSpacing: "0em",
-                  textAlign: "left",
+                  textAlign: {
+                    xs: "center",
+                    lg: "left",
+                  },
                 }}
               >
                 Zoho to Exchange: Bridge calendar platforms with calendar
@@ -78,7 +229,10 @@ const BlogFeed = () => {
                         paddingRight: "20px",
                         borderRight: "1px solid rgba(0, 0, 0, 0.3)",
                         fontFamily: "Work Sans",
-                        fontSize: "16px",
+                        fontSize: {
+                          xs: "10px",
+                          lg: "16px",
+                        },
                         fontWeight: 500,
                         lineHeight: "22px",
                         letterSpacing: "0em",
@@ -90,7 +244,10 @@ const BlogFeed = () => {
                     <Stack
                       sx={{
                         fontFamily: "Work Sans",
-                        fontSize: "16px",
+                        fontSize: {
+                          xs: "10px",
+                          lg: "16px",
+                        },
                         fontWeight: 500,
                         lineHeight: "22px",
                         letterSpacing: "0em",
@@ -103,7 +260,10 @@ const BlogFeed = () => {
                   <Stack
                     sx={{
                       fontFamily: "Work Sans",
-                      fontSize: "16px",
+                      fontSize: {
+                        xs: "10px",
+                        lg: "16px",
+                      },
                       fontWeight: 600,
                       lineHeight: "22px",
                       letterSpacing: "0em",
@@ -497,6 +657,59 @@ const BlogFeed = () => {
             </Stack>
 
             <Stack
+              m={"0 auto"}
+              width={"95%"}
+              display={{
+                xs: "flex",
+                lg: "none",
+              }}
+            >
+              <Box marginTop="30px" border="0.5px solid rgba(0, 0, 0, 0.3)" />
+              <Stack>
+                <Box marginTop="25px">
+                  <Typography
+                    sx={{
+                      fontFamily: "Work Sans",
+                      fontSize: "20px",
+                      fontWeight: 700,
+                      lineHeight: "21px",
+                      letterSpacing: "0em",
+                      textAlign: "left",
+                    }}
+                  >
+                    FEATURED POSTS
+                  </Typography>
+                </Box>
+                <Stack>
+                  {FeaturedPosts.slice(0, 4).map((post, index) => (
+                    <Stack key={index} gap={1} marginTop="27px">
+                      <Stack direction="row" gap={1}>
+                        <DescriptionIcon />
+                        <Typography
+                          key={index}
+                          sx={{
+                            fontFamily: "Work Sans",
+                            fontSize: "16px",
+                            fontWeight: 400,
+                            lineHeight: "24px",
+                            letterSpacing: "-0.02em",
+                            textAlign: "left",
+                          }}
+                        >
+                          {post.title}
+                        </Typography>
+                      </Stack>
+                    </Stack>
+                  ))}
+                </Stack>
+              </Stack>
+              <Box marginTop="30px" border="0.5px solid rgba(0, 0, 0, 0.3)" />
+            </Stack>
+            <Stack
+              display={{
+                xs: "none",
+                lg: "flex",
+              }}
               sx={{
                 position: "absolute",
                 width: "330px",
@@ -530,13 +743,9 @@ const BlogFeed = () => {
                   }}
                 />
               </Stack>
-              <Box
-                marginTop={"30px"}
-                border={"0.5px solid rgba(0, 0, 0, 0.3)"}
-              />
-
-              <Stack width={"324px"} height={"210px"}>
-                <Box marginTop={"25px"}>
+              <Box marginTop="30px" border="0.5px solid rgba(0, 0, 0, 0.3)" />
+              <Stack width="324px" height="210px">
+                <Box marginTop="25px">
                   <Typography
                     sx={{
                       fontFamily: "Work Sans",
@@ -552,8 +761,8 @@ const BlogFeed = () => {
                 </Box>
                 <Stack>
                   {FeaturedPosts.slice(0, 4).map((post, index) => (
-                    <Stack key={index} gap={1} marginTop={"27px"}>
-                      <Stack direction={"row"} gap={1}>
+                    <Stack key={index} gap={1} marginTop="27px">
+                      <Stack direction="row" gap={1}>
                         <DescriptionIcon />
                         <Typography
                           key={index}
@@ -573,13 +782,9 @@ const BlogFeed = () => {
                   ))}
                 </Stack>
               </Stack>
-
-              <Box
-                marginTop={"70px"}
-                border={"0.5px solid rgba(0, 0, 0, 0.3)"}
-              />
+              <Box marginTop="70px" border="0.5px solid rgba(0, 0, 0, 0.3)" />
               <Stack>
-                <Box marginTop={"25px"}>
+                <Box marginTop="25px">
                   <Typography
                     sx={{
                       fontFamily: "Work Sans",
@@ -596,7 +801,7 @@ const BlogFeed = () => {
               </Stack>
               <TagSection
                 activeTags={activeTags}
-                setActiveTags={handleSetActiveTags} // Use the updated setActiveTags function
+                setActiveTags={handleSetActiveTags}
                 tags={Tags}
               />
             </Stack>

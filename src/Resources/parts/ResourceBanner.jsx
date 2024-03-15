@@ -5,7 +5,7 @@ import "../../Solutions/IndustriesByusecases/Solution.css";
 import ResourceGallery from "./ResourceGallery";
 const ResourceBanner = () => {
   return (
-    <Stack bgcolor={"#052973"} className="textured-background" height={"100%"}>
+    <Stack bgcolor={"#052973"} height={"100%"}>
       <NavLight />
       <Stack gap={4} pb={10} margin={"0 auto"}>
         <Stack

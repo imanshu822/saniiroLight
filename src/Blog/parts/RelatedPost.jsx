@@ -19,7 +19,11 @@ const RelatedPost = () => {
             textAlign={"center"}
             sx={{
               fontFamily: "Work Sans",
-              fontSize: "25px",
+              fontSize: {
+                xs: "18px",
+                md: "20px",
+                lg: "24px",
+              },
               fontWeight: 600,
               lineHeight: "31px",
               letterSpacing: "0em",
@@ -34,7 +38,10 @@ const RelatedPost = () => {
               <Typography
                 sx={{
                   fontFamily: "Work Sans",
-                  fontSize: "14px",
+                  fontSize: {
+                    xs: "14px",
+                    lg: "16px",
+                  },
                   fontWeight: 500,
                   lineHeight: "19px",
                   letterSpacing: "0em",
@@ -46,7 +53,11 @@ const RelatedPost = () => {
               <Typography
                 sx={{
                   fontFamily: "Work Sans",
-                  fontSize: "19px",
+                  fontSize: {
+                    xs: "16px",
+                    lg: "19px",
+                  },
+
                   fontWeight: 700,
                   lineHeight: "24px",
                   letterSpacing: "0em",
@@ -60,7 +71,10 @@ const RelatedPost = () => {
               <Typography
                 sx={{
                   fontFamily: "Work Sans",
-                  fontSize: "14px",
+                  fontSize: {
+                    xs: "14px",
+                    lg: "16px",
+                  },
                   fontWeight: 500,
                   lineHeight: "19px",
                   letterSpacing: "0em",
@@ -72,7 +86,10 @@ const RelatedPost = () => {
               <Typography
                 sx={{
                   fontFamily: "Work Sans",
-                  fontSize: "19px",
+                  fontSize: {
+                    xs: "16px",
+                    lg: "19px",
+                  },
                   fontWeight: 700,
                   lineHeight: "24px",
                   letterSpacing: "0em",

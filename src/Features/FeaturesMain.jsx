@@ -378,33 +378,55 @@ function FeaturesMain() {
       {/* for Desktip view */}
 
       <Stack
-        display={{
-          xs: "none",
-          lg: "flex",
+        direction={{
+          xs: "column",
+          lg: "row",
         }}
-        direction={"row"}
         alignItems={"start"}
         pt={5}
+        width={"90%"}
+        margin={"0 auto"}
       >
         <Stack
           className="sidebar"
+          width={{ lg: "20%", xs: "100%" }}
           alignItems={"center"}
-          p={"20px 0"}
-          bgcolor={"#F6F8FF"}
+          bgcolor={"white"}
+          border={"1px solid lightgrey"}
+          zIndex={11}
         >
-          <Stack width={"29%"}>
+          <Stack
+            height={{ xs: "70px", lg: "" }}
+            width={{ lg: "29%", xs: "95%" }}
+            margin={"0 auto"}
+            direction={{ lg: "column", xs: "row" }}
+            gap={{ lg: 1, xs: "30px" }}
+            sx={{
+              overflowY: "scroll",
+              scrollbarWidth: "none",
+              scrollbarColor: "transparent transparent",
+              "&::-webkit-scrollbar": {
+                display: "none",
+              },
+            }}
+          >
             {lists.map((d) => (
-              <ul>
+              <ul key={d.id}>
                 <li
+                  style={{
+                    listStyle: "none",
+                    borderBottom:
+                      activeItem === `item${d.id}` ? "1px solid gray" : "none",
+                  }}
                   onClick={() => handleItemClick(`item${d.id}`)}
-                  className={activeItem === `item${d.id}` ? "active" : ""}
                 >
-                  {d.heading}
+                  <Typography>{d.heading}</Typography>
                 </li>
               </ul>
             ))}
           </Stack>
         </Stack>
+
         <Stack width={"100%"}>
           {lists2.map((d) => (
             <Stack className="content" bgcolor={d.bgcolor} width={"100%"}>
@@ -414,15 +436,25 @@ function FeaturesMain() {
                 id={`item${d.id}`}
                 className="item"
                 alignItems={"flex-start"}
+                margin={"0 auto"}
               >
                 <Typography
                   fontWeight={"bold"}
-                  fontSize={"35px"}
+                  fontSize={{
+                    xs: "25px",
+                    sm: "25px",
+                    md: "35px",
+                  }}
                   color={d.id === "4" || d.id === "6" ? "white" : "black"}
                 >
                   {d.title}
                 </Typography>
                 <Typography
+                  fontSize={{
+                    xs: "12px",
+                    sm: "14px",
+                    md: "20px",
+                  }}
                   color={d.id === "4" || d.id === "6" ? "white" : "black"}
                 >
                   {d.description}
@@ -438,7 +470,10 @@ function FeaturesMain() {
                           : d.id === "6"
                           ? "white"
                           : "#0079FF",
-                      fontSize: "16px",
+                      fontSize: {
+                        xs: "14px",
+                        md: "16px",
+                      },
                       fontWeight: "bold",
                       pl: "0px",
                       "&:hover": {
@@ -455,8 +490,14 @@ function FeaturesMain() {
                   <Stack pt={1}>
                     <Button
                       sx={{
-                        width: "200px",
-                        fontSize: "18px",
+                        width: {
+                          xs: "150px",
+                          md: "200px",
+                        },
+                        fontSize: {
+                          xs: "14px",
+                          md: "16px",
+                        },
                         fontWeight: "bold",
                         fontFamily: "Work Sans",
                         p: 1.5,
@@ -466,25 +507,64 @@ function FeaturesMain() {
                     </Button>
                   </Stack>
                 )}
-                <Stack direction={"row"} gap={"22px"} pt={2}>
+                <Stack
+                  direction={"row"}
+                  justifyContent={"center"}
+                  gap={1}
+                  pt={1}
+                  width={{
+                    xs: "100%",
+                    sm: "100%",
+                    md: "100%",
+                  }}
+                  flexWrap={"wrap"}
+                >
                   {d.items?.map((di) => (
                     <Stack
-                      width={"19%"}
+                      width={"40%"}
                       gap={2}
                       bgcolor={"white"}
                       pl={2}
                       borderRadius={2}
-                      border={`1px solid ${di.boxcolor}`}
+                      border={
+                        di.boxcolor
+                          ? `1px solid {${di.boxcolor}`
+                          : "1px solid lightgrey"
+                      }
                     >
-                      <img
-                        src={di.src}
-                        alt=""
-                        style={{ width: "70px", height: "70px" }}
-                      />
-                      <Typography fontSize={"23px"} fontWeight={"bold"}>
+                      <Stack
+                        width={{ xs: "50px", sm: "60px", md: "70px" }}
+                        height={{
+                          xs: "50px",
+                          sm: "60px",
+                          md: "70px",
+                        }}
+                      >
+                        <img
+                          src={di.src}
+                          alt=""
+                          style={{ width: "100%", height: "100%" }}
+                        />
+                      </Stack>
+
+                      <Typography
+                        fontSize={{
+                          xs: "14px",
+                          sm: "16px",
+                          md: "23px",
+                        }}
+                        fontWeight={"bold"}
+                      >
                         {di.title}
                       </Typography>
-                      <Typography fontSize={"13px"} color={"grey"}>
+                      <Typography
+                        fontSize={{
+                          xs: "10px",
+                          sm: "12px",
+                          md: "13px",
+                        }}
+                        color={"grey"}
+                      >
                         {di.description}
                       </Typography>
                       <Stack alignItems={"flex-start"}>
@@ -493,7 +573,10 @@ function FeaturesMain() {
                           sx={{
                             bgcolor: "transparent",
                             color: "#0079FF",
-                            fontSize: "16px",
+                            fontSize: {
+                              xs: "14px",
+                              md: "16px",
+                            },
                             fontWeight: "bold",
                             pl: "0px",
                             "&:hover": {
@@ -516,7 +599,7 @@ function FeaturesMain() {
       </Stack>
 
       {/* for mobile view  */}
-      <Stack
+      {/* <Stack
         direction={"column"}
         pt={5}
         display={{
@@ -524,46 +607,53 @@ function FeaturesMain() {
           lg: "none",
         }}
       >
-        <Stack alignItems={"center"} p={"20px 0"} bgcolor={"white"}>
+        <Stack
+          className="sidebar"
+          width={{ xl: "20%", xs: "100%" }}
+          alignItems={"center"}
+          bgcolor={"white"}
+          border={"1px solid lightgrey"}
+          zIndex={11}
+        >
           <Stack
-            display={"fixed"}
-            margin={"0 auto"}
-            width={{
-              xs: "95%",
-            }}
-            direction={"row"}
-            gap={2}
-            sx={{
-              overflowY: "scroll",
-              scrollbarWidth: "none",
-              scrollbarColor: "transparent transparent",
-              "&::-webkit-scrollbar": {
-                display: "none",
-              },
-            }}
-            justifyContent={"center"}
+            className="sidebar"
+            width={{ xl: "20%", xs: "100%" }}
+            alignItems={"center"}
+            bgcolor={"white"}
+            zIndex={11}
           >
-            {lists.map((d) => (
-              <Box
-                borderBottom={"2px solid transparent"}
-                padding={{
-                  xs: "10px 5px",
-                  sm: "10px 5px",
-                  md: "10px 5px",
-                }}
-                sx={{
-                  "&:hover": {
-                    cursor: "pointer",
-                    borderBottom: "1px solid grey",
-                  },
-                }}
-                alignItems={"center"}
-                onClick={() => handleItemClick(`item${d.id}`)}
-                className={activeItem === `item${d.id}` ? "active" : ""}
-              >
-                {d.heading}
-              </Box>
-            ))}
+            <Stack
+              height={{ xs: "70px", xl: "" }}
+              width={{ xl: "29%", xs: "95%" }}
+              margin={"0 auto"}
+              direction={{ xl: "column", xs: "row" }}
+              gap={{ xl: 2, xs: "30px" }}
+              sx={{
+                overflowY: "scroll",
+                scrollbarWidth: "none",
+                scrollbarColor: "transparent transparent",
+                "&::-webkit-scrollbar": {
+                  display: "none",
+                },
+              }}
+            >
+              {lists.map((d) => (
+                <ul key={d.id}>
+                  <li
+                    style={{
+                      listStyle: "none",
+                      borderBottom:
+                        activeItem === `item${d.id}`
+                          ? "1px solid gray"
+                          : "none",
+                    }}
+                    onClick={() => handleItemClick(`item${d.id}`)}
+                  >
+                    <Typography>{d.heading}</Typography>
+                  </li>
+                </ul>
+              ))}
+            </Stack>
           </Stack>
         </Stack>
         <Stack width={"100%"}>
@@ -725,7 +815,7 @@ function FeaturesMain() {
             </Stack>
           ))}
         </Stack>
-      </Stack>
+      </Stack> */}
     </>
   );
 }

@@ -5,7 +5,7 @@ import Button from "../../utils/Button";
 const CommentForm = () => {
   return (
     <>
-      <Stack>
+      <Stack width={"100%"}>
         <Typography
           sx={{
             fontFamily: "Work Sans",
@@ -43,7 +43,16 @@ const CommentForm = () => {
         >
           Your email address will not be published.Required fields are marked*
         </Typography>
-        <Stack width={"789px"} height={"800px"}>
+        <Stack
+          width={{
+            xs: "100%",
+            lg: "789px",
+          }}
+          height={{
+            xs: "100%",
+            lg: "800px",
+          }}
+        >
           <FormControl>
             <Stack gap={2}>
               <Stack gap={"5px"}>
@@ -62,7 +71,7 @@ const CommentForm = () => {
                 </label>
                 <input
                   style={{
-                    height: "272px",
+                    height: "200px",
                     border: "1px solid gray",
                   }}
                   type="text"
@@ -155,13 +164,24 @@ const CommentForm = () => {
               By submitting this form, you agree to the processing of personal
               data according to our Privacy Policy.
             </Typography>
-            <Stack>
+            <Stack
+              alignItems={{
+                xs: "center",
+                lg: "flex-start",
+              }}
+            >
               <Stack
                 justifyContent={"center"}
                 alignItems={"center"}
                 sx={{
-                  width: "187px",
-                  height: "46px",
+                  width: {
+                    xs: "140px",
+                    lg: "187px",
+                  },
+                  height: {
+                    xs: "35px",
+                    lg: "46px",
+                  },
                   padding: "7px 16px",
                   gap: "10px",
                   backgroundColor: "#F15B25",
@@ -170,7 +190,10 @@ const CommentForm = () => {
                 <Typography
                   sx={{
                     fontFamily: "Work Sans",
-                    fontSize: "18px",
+                    fontSize: {
+                      xs: "12px",
+                      lg: "16px",
+                    },
                     fontWeight: 600,
                     lineHeight: "18px",
                     letterSpacing: "0em",

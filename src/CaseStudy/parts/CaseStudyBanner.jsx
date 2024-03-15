@@ -9,7 +9,14 @@ const CaseStudyBanner = () => {
     <>
       {/* desktop view  */}
 
-      {/* <Stack bgcolor={"#052973"} className="textured-background">
+      <Stack
+        display={{
+          xs: "none",
+          lg: "block",
+        }}
+        bgcolor={"#052973"}
+        className="textured-background"
+      >
         <NavLight />
         <Stack gap={4} pb={14}>
           <Stack
@@ -54,10 +61,17 @@ const CaseStudyBanner = () => {
             </Typography>
           </Stack>
         </Stack>
-      </Stack> */}
+      </Stack>
 
       {/* mobile view and desktop both */}
-      <Stack bgcolor={"#052973"} className="textured-background">
+      <Stack
+        display={{
+          xs: "block",
+          lg: "none",
+        }}
+        bgcolor={"#052973"}
+        className="textured-background"
+      >
         <NavLight />
         <Stack pb={14}>
           <Stack

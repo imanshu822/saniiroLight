@@ -1,17 +1,14 @@
 /* App.css */
 
-
-
 .sidebar {
   min-width: 25%;
-  top :0;
+  top: 0;
   height: fit-content;
   position: sticky;
-  
 }
 
 .sidebar ul {
-  list-style:  none;
+  list-style: none;
   padding: 0;
 }
 
@@ -22,9 +19,8 @@
 
 .sidebar li.active {
   /* background-color: #ccc; */
-  color: red;
+  /* color: red; */
 }
-
 
 .item {
   padding: 20px;

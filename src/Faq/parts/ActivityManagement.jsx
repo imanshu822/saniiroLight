@@ -28,8 +28,25 @@ const ActivityManagement = () => {
   };
 
   return (
-    <Stack width={"1240px"} margin={"50px auto"} direction={"row"}>
-      <Stack width={"60%"}>
+    <Stack
+      width={{
+        xs: "95%",
+        xl: "1240px",
+      }}
+      gap={4}
+      margin={"50px auto"}
+      direction={{
+        xs: "column",
+        lg: "row",
+      }}
+    >
+      <Stack
+        width={{
+          xs: "95%",
+          lg: "60%",
+        }}
+        margin={"0 auto"}
+      >
         {FAQActivity.map((activity, index) => (
           <Stack
             key={index}
@@ -44,8 +61,14 @@ const ActivityManagement = () => {
             >
               <Stack direction={"row"} alignItems={"center"} gap={2}>
                 <Box
-                  width={"67px"}
-                  height={"67px"}
+                  width={{
+                    xs: "50px",
+                    lg: "67px",
+                  }}
+                  height={{
+                    xs: "50px",
+                    lg: "67px",
+                  }}
                   component="img"
                   src={flesImg}
                   alt="Files image"
@@ -54,7 +77,10 @@ const ActivityManagement = () => {
                   <Typography
                     sx={{
                       fontFamily: "Work Sans",
-                      fontSize: "25px",
+                      fontSize: {
+                        xs: "15px",
+                        lg: "25px",
+                      },
                       fontWeight: 700,
                       lineHeight: "37px",
                       letterSpacing: "0em",
@@ -80,8 +106,14 @@ const ActivityManagement = () => {
               <ArrowBackIosIcon
                 sx={{
                   paddingTop: "10px",
-                  height: "50px",
-                  width: "50px",
+                  height: {
+                    xs: "30px",
+                    lg: "50px",
+                  },
+                  width: {
+                    xs: "30px",
+                    lg: "50px",
+                  },
                   color: "#F15B25",
                   transform: activities[index].rotated
                     ? "rotate(90deg)"
@@ -101,7 +133,14 @@ const ActivityManagement = () => {
                       color: "black",
                     }}
                   >
-                    <Stack direction={"row"} gap={3} margin={"10px 100px"}>
+                    <Stack
+                      direction={"row"}
+                      gap={3}
+                      margin={{
+                        xs: "10px 50px",
+                        lg: "20px 100px",
+                      }}
+                    >
                       <Typography
                         sx={{
                           "&:hover": {
@@ -121,11 +160,21 @@ const ActivityManagement = () => {
           </Stack>
         ))}
       </Stack>
+
       <Stack
-        width={"40%"}
-        paddingLeft={"80px"}
-        marginLeft={"40px"}
-        borderLeft={"1px solid gray"}
+        width={{
+          xs: "95%",
+          lg: "40%",
+        }}
+        margin={"0 auto"}
+        paddingLeft={{
+          xs: "0",
+          lg: "80px",
+        }}
+        borderLeft={{
+          xs: "none",
+          lg: "1px solid gray",
+        }}
       >
         <Typography
           sx={{

@@ -388,10 +388,6 @@ function FeaturesBysize() {
     <>
       {/* Desktop view  */}
       <Stack
-        // display={{
-        //   xs: "none",
-        //   lg: "flex",
-        // }}
         direction={{ xl: "row", xs: "column" }}
         alignItems={"start"}
         pt={{ xl: 40, xs: "none" }}
@@ -406,9 +402,8 @@ function FeaturesBysize() {
           zIndex={11}
         >
           <Stack
-            height={{ xs: "55px", xl: "" }}
+            height={{ xs: "70px", xl: "" }}
             width={{ xl: "29%", xs: "95%" }}
-            // display={"fixed"}
             margin={"0 auto"}
             direction={{ xl: "column", xs: "row" }}
             gap={{ xl: 2, xs: "30px" }}
@@ -420,40 +415,20 @@ function FeaturesBysize() {
                 display: "none",
               },
             }}
-            // justifyContent={"center"}
           >
             {lists.map((d) => (
-              <ul>
+              <ul key={d.id}>
                 <li
-                  style={{ listStyle: "none" }}
+                  style={{
+                    listStyle: "none",
+                    borderBottom:
+                      activeItem === `item${d.id}` ? "1px solid gray" : "none",
+                  }}
                   onClick={() => handleItemClick(`item${d.id}`)}
-                  className={activeItem === `item${d.id}` ? "active" : ""}
                 >
-                  {d.heading}
+                  <Typography>{d.heading}</Typography>
                 </li>
               </ul>
-              // <Box
-              //   marginBottom={"15px"}
-              //   border={"1px solid lightgrey"}
-              //   borderRadius={"10px"}
-              //   margin={"5px"}
-              //   padding={{
-              //     xs: "10px 5px",
-              //     sm: "10px 5px",
-              //     md: "10px 5px",
-              //   }}
-              //   sx={{
-              //     "&:hover": {
-              //       cursor: "pointer",
-              //       backgroundColor: "#F0F8FE",
-              //     },
-              //   }}
-              //   alignItems={"center"}
-              //   onClick={() => handleItemClick(`item${d.id}`)}
-              //   className={activeItem === `item${d.id}` ? "active" : ""}
-              // >
-              //   {d.heading}
-              // </Box>
             ))}
           </Stack>
         </Stack>

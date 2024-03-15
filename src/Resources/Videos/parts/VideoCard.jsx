@@ -7,8 +7,8 @@ const VideoCard = ({ img, title, description, duration }) => {
       spacing={2}
       width={{
         lg: "280px",
-        md: "430px",
-        sm: "430px",
+        md: "330px",
+        sm: "330px",
         xs: "300px",
       }}
       borderRadius={"10px"}
@@ -46,8 +46,8 @@ const VideoCard = ({ img, title, description, duration }) => {
         component="img"
         width={{
           lg: "280px",
-          md: "430px",
-          sm: "430px",
+          md: "330px",
+          sm: "330px",
           xs: "300px",
         }}
         height={"210px"}

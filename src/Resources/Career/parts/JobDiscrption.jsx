@@ -8,6 +8,7 @@ import CareerGallery from "./CareerGallery";
 import mapPin from "./assets/map-pin 3.png";
 import ArrowForwardSharpIcon from "@mui/icons-material/ArrowForwardSharp";
 import { Link } from "react-router-dom";
+import Gallery from "../../../Partner/parts/Gallery";
 
 const Features = [
   {
@@ -61,7 +62,16 @@ const Features = [
 const JobDiscrption = () => {
   return (
     <>
-      <Stack width={"1240px"} margin={"5px auto"}>
+      <Stack
+        width={{
+          xs: "100%",
+          sm: "100%",
+          md: "100%",
+          lg: "95%",
+          xl: "90%",
+        }}
+        margin={"5px auto"}
+      >
         <Link
           to="/Resources/Career"
           sx={{
@@ -103,8 +113,32 @@ const JobDiscrption = () => {
             </Typography>
           </Stack>
         </Link>
-        <Stack margin={"5px auto"} direction={"row"} gap={10}>
-          <Stack width={"785px"}>
+        <Stack
+          direction={{
+            xs: "column",
+            sm: "column",
+            md: "column",
+            lg: "column",
+            xl: "row",
+          }}
+          alignItems={{
+            xs: "center",
+            sm: "center",
+            md: "center",
+            lg: "flex-start",
+          }}
+          p={3}
+          gap={10}
+        >
+          <Stack
+            width={{
+              xs: "100%",
+              sm: "100%",
+              md: "100%",
+              lg: "90%",
+              xl: "60%",
+            }}
+          >
             <Typography
               sx={{
                 fontFamily: "Work Sans",
@@ -192,10 +226,25 @@ const JobDiscrption = () => {
                 </li>
               </ul>
             </Typography>
-            <Stack direction={"row"} gap={"20px"} marginTop={"40px"}>
+            <Stack
+              direction={{
+                xs: "column",
+                sm: "column",
+                md: "column",
+                lg: "row",
+                xl: "row",
+              }}
+              gap={"20px"}
+              marginTop={"40px"}
+            >
               <Stack
-                width={"360px"}
-                height={"360px"}
+                pb={3}
+                width={{
+                  xs: "100%",
+                  sm: "100%",
+                  md: "50%",
+                  lg: "360px",
+                }}
                 sx={{
                   border: "0.54px solid #00000033",
                   borderRadius: "8px",
@@ -203,8 +252,13 @@ const JobDiscrption = () => {
               >
                 <Box
                   sx={{
-                    width: "360px",
-                    height: "43px",
+                    width: {
+                      xs: "100%",
+                      sm: "100%",
+                      md: "100%",
+                      lg: "360px",
+                    },
+
                     borderRadius: "7px 7px 0px 0px",
                     backgroundColor: "#052973",
                   }}
@@ -230,7 +284,12 @@ const JobDiscrption = () => {
                   direction={"column"}
                   gap={"20px"}
                   marginRight={"20px"}
-                  marginLeft={"50px"}
+                  marginLeft={{
+                    xs: "20px",
+                    sm: "20px",
+                    md: "50px",
+                    lg: "50px",
+                  }}
                   marginTop={"20px"}
                 >
                   <Typography
@@ -308,8 +367,13 @@ const JobDiscrption = () => {
                 </Stack>
               </Stack>
               <Stack
-                width={"360px"}
-                height={"360px"}
+                width={{
+                  xs: "100%",
+                  sm: "100%",
+                  md: "100%",
+                  lg: "360px",
+                }}
+                pb={3}
                 sx={{
                   border: "0.54px solid #00000033",
                   borderRadius: "8px",
@@ -317,8 +381,13 @@ const JobDiscrption = () => {
               >
                 <Box
                   sx={{
-                    width: "360px",
-                    height: "43px",
+                    width: {
+                      xs: "100%",
+                      sm: "100%",
+                      md: "100%",
+                      lg: "360px",
+                    },
+
                     borderRadius: "7px 7px 0px 0px",
                     backgroundColor: "#052973",
                   }}
@@ -344,7 +413,12 @@ const JobDiscrption = () => {
                   direction={"column"}
                   gap={"20px"}
                   marginRight={"20px"}
-                  marginLeft={"50px"}
+                  marginLeft={{
+                    xs: "20px",
+                    sm: "20px",
+                    md: "50px",
+                    lg: "50px",
+                  }}
                   marginTop={"20px"}
                 >
                   <Typography
@@ -437,8 +511,8 @@ const JobDiscrption = () => {
             <Stack>
               <Stack
                 marginTop={"20px"}
-                width={"742px"}
-                height={"360px"}
+                width={"100%"}
+                pb={3}
                 sx={{
                   border: "0.54px solid #00000033",
                   borderRadius: "8px",
@@ -446,8 +520,7 @@ const JobDiscrption = () => {
               >
                 <Box
                   sx={{
-                    width: "785pxpx",
-                    height: "43px",
+                    width: "100%",
                     borderRadius: "7px 7px 0px 0px",
                     backgroundColor: "#052973",
                   }}
@@ -473,7 +546,12 @@ const JobDiscrption = () => {
                   direction={"column"}
                   gap={"28px"}
                   marginRight={"20px"}
-                  marginLeft={"50px"}
+                  marginLeft={{
+                    xs: "20px",
+                    sm: "20px",
+                    md: "50px",
+                    lg: "50px",
+                  }}
                   marginTop={"23px"}
                 >
                   <Typography
@@ -593,15 +671,50 @@ const JobDiscrption = () => {
               >
                 Sneak Peek at our Workplace Culture
               </Typography>
-              <Stack width={"785px"}>
+              <Stack
+                width={"100%"}
+                display={{
+                  xs: "none",
+                  sm: "none",
+                  md: "none",
+                  lg: "flex",
+                }}
+              >
                 <CareerGallery />
+              </Stack>
+              <Stack
+                display={{
+                  xs: "flex",
+                  sm: "flex",
+                  md: "flex",
+                  lg: "none",
+                }}
+              >
+                <Gallery />
               </Stack>
             </Stack>
           </Stack>
-          <Stack width={"372px"}>
+          <Stack
+            width={{
+              xs: "100%",
+              sm: "100%",
+              md: "100%",
+              lg: "40%",
+            }}
+          >
             <Stack
-              width={"372px"}
-              height={"505px"}
+              width={{
+                xs: "100%",
+                sm: "100%",
+                md: "100%",
+                lg: "372px",
+              }}
+              height={{
+                xs: "100%",
+                sm: "100%",
+                md: "100%",
+                lg: "505px",
+              }}
               borderRadius={"8px"}
               sx={{
                 border: "0.54px solid #00000033",
